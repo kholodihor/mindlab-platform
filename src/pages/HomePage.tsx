@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
-import { Button } from "@/components/ui/button"
 import Header from "@/components/main/header/Header"
+import RippleCard from "../components/RippleCard"
 
 const HomePage = () => {
   const { t } = useTranslation()
@@ -8,10 +8,10 @@ const HomePage = () => {
     <>
       <Header />
       <main className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-2 bg-black">
-        <h1 className="text-violet text-3xl text-[3rem] font-light">
+        <h1 className="text-3xl text-[3rem] font-light text-violet">
           {t("hello")}
         </h1>
-        <Button>Click me</Button>
+        <RippleCard />
       </main>
     </>
   )
