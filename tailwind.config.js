@@ -39,7 +39,17 @@ module.exports = {
         beige: "hsl(var(--beige))"
       },
       fontFamily: {
-        oswald: ["var(--oswald)"]
+        oswald: "var(--oswald)"
+      },
+      screens: {
+        xs: "320px",
+        sm: "430px",
+        md: "768px",
+        xl: "1280px",
+        "2xl": "1368px",
+        "3xl": "1440px",
+        "4xl": "1536px",
+        "5xl": "1920px"
       }
     }
   },

@@ -1,6 +1,6 @@
-import Header from "@/components/main/Header"
-import { Button } from "@/components/ui/button"
 import { useTranslation } from "react-i18next"
+import { Button } from "@/components/ui/button"
+import Header from "@/components/main/header/Header"
 
 const HomePage = () => {
   const { t } = useTranslation()
