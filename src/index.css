@@ -4,6 +4,7 @@
 
   @layer base {
     :root {
+      /*Colors*/
       --background: 0 0% 100%;
       --foreground: 222.2 84% 4.9%;
 
@@ -33,6 +34,12 @@
       --ring: 222.2 84% 4.9%;
 
       --radius: 0.5rem;
+
+      --bg-color-modal:rgba(170, 174, 223, 1);
+      --overlay-modal: rgba(0,0,0,0.8);
+
+    /*  Z-indexes*/
+      --z-index-modal: 100;
     }
 
     .dark {
