@@ -1,10 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Fixel Display";
+  font-weight: 100;
+  src: url("/fonts/FixelDisplay-ExtraLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fixel Display";
+  font-weight: 200;
+  src: url("/fonts/FixelDisplay-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fixel Display";
+  font-weight: 300;
+  src: url("/fonts/FixelDisplay-Thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fixel Display";
+  font-weight: 400;
+  src: url("/fonts/FixelDisplay-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fixel Display";
+  font-weight: 500;
+  src: url("/fonts/FixelDisplay-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fixel Display";
+  font-weight: 700;
+  src: url("/fonts/FixelDisplay-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fixel Display";
+  font-weight: 800;
+  src: url("/fonts/FixelDisplay-Bold.woff2") format("woff2");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 223, 10%, 14%;
+    --background: 230, 11%, 11%;
     --foreground: 240, 2%, 92%;
 
     --lime: 76, 83%, 58%;
@@ -20,7 +58,12 @@
     --rose: 357, 100%, 73%;
     --peach: 18, 100%, 86%;
     --beige: 36, 100%, 91%;
+    --oswald: "Oswald", sans-serif;
   }
+}
+
+body {
+  font-family: "Fixel Display", sans-serif;
 }
 
 @layer base {

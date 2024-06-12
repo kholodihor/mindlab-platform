@@ -37,6 +37,9 @@ module.exports = {
         rose: "hsl(var(--rose))",
         peach: "hsl(var(--peach))",
         beige: "hsl(var(--beige))"
+      },
+      fontFamily: {
+        oswald: ["var(--oswald)"]
       }
     }
   },
