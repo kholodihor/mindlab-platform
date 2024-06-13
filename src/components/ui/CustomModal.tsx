@@ -1,6 +1,7 @@
 import Modal from "react-modal"
 import React from "react"
 import {Close} from "@/components/svg/Close.tsx";
+import { Button } from "@/components/ui/button.tsx";
 
 interface CustomModalProps {
   isOpen: boolean
@@ -23,13 +24,15 @@ export const CustomModal = ({
       onRequestClose={() => onClose()}
       bodyOpenClassName="overflow-hidden"
     >
-      <button
+      <Button
         className="absolute right-[20px] top-[20px] flex items-center justify-center"
         type="button"
+        variant={"default"}
+        size={"icon"}
         onClick={() => onClose()}
       >
         <Close />
-      </button>
+      </Button>
 
       {children}
     </Modal>
