@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Fixel Display';
+    src: url('./FixelDisplay-Thin.woff') format('woff');
+    font-weight: thin;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fixel Display';
+    src: url('./FixelDisplay-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fixel Display';
+    src: url('./FixelDisplay-Light.woff') format('woff');
+    font-weight: light;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fixel Display';
+    src: url('./FixelDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fixel Display';
+    src: url('./FixelDisplay-Medium.woff') format('woff');
+    font-weight: medium;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fixel Display';
+    src: url('./FixelDisplay-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Fixel Display';
+    src: url('./FixelDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
