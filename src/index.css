@@ -61,7 +61,7 @@
     --oswald: "Oswald", sans-serif;
 
       --bg-color-modal:rgba(170, 174, 223, 1);
-      --overlay-modal: rgba(0,0,0,0.8);
+      --overlay-modal: rgba(0, 0, 0, 0.8);
       --error: #FF0000;
 
       /*  Z-indexes*/

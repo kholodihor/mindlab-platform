@@ -2,7 +2,7 @@ import { GirlWithCap } from "@/components/svg/GirlWithCap.tsx"
 
 export const BlockText = () => {
   return (
-    <div className="mr-[55px] w-[425px] border border-solid border-fuchsia-600">
+    <div className="mr-[55px] w-[425px]">
       <h2 className="font-fixel mb-[36px] text-[32px] font-medium text-black">
         Ласкаво просимо на платформу!
       </h2>

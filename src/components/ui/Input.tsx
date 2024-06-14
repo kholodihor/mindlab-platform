@@ -1,8 +1,9 @@
 import { UseFormRegister, UseFormWatch } from "react-hook-form";
+import { useState } from "react";
+import { EyeOpen } from "@/components/svg/EyeOpen.tsx";
 
 interface InputProps {
   label: string
-  placeholder: string
   icon?: JSX.Element
   type: string
   togglePasswordVisibility?: () => void
@@ -14,16 +15,16 @@ interface InputProps {
 export const Input = (
   {
   label,
-  placeholder,
   icon,
   type,
   togglePasswordVisibility,
   register,
   name
 }: InputProps) => {
+  const [showPassword, setShowPassword] = useState(false)
   const handleClickEye = () => {
     if (togglePasswordVisibility) {
-      togglePasswordVisibility()
+      setShowPassword(!showPassword)
     }
   }
 
@@ -33,9 +34,8 @@ export const Input = (
         <label className={"text-[16px] text-darkGray"}>{label}</label>
         <input
           className={
-            "w-[360px] border-b border-solid border-b-graphite p-[8px_16px] text-[18px] font-medium text-black placeholder-lightGray"
+            "w-[360px] border-b border-solid border-b-graphite p-[8px_16px] text-[18px] text-lightGray"
           }
-          placeholder={placeholder}
           type={type}
           {...register(name)}
         />
@@ -48,10 +48,9 @@ export const Input = (
       <div className={"relative "}>
         <input
           className={
-            "w-[360px] border-b border-solid border-b-graphite p-[8px_16px] text-[18px] font-medium text-black placeholder-lightGray"
+            "w-[360px] border-b border-solid border-b-graphite p-[8px_16px] text-[18px] text-lightGray"
           }
-          placeholder={placeholder}
-          type={type}
+          type={showPassword ? "text" : type}
           {...register(name)}
         />
         {icon && (
@@ -60,7 +59,7 @@ export const Input = (
             onClick={handleClickEye}
             type="button"
           >
-            {icon}
+            {showPassword ? <EyeOpen /> : icon}
           </button>
         )}
       </div>
