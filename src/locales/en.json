@@ -1,3 +1,9 @@
 {
-  "hello": "hello"
+  "hello": "hello",
+  "Main": {
+    "courses_section": {
+      "title": "Our courses",
+      "sale": "Free"
+    }
+  }
 }

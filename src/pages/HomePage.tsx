@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next"
 import Header from "@/components/main/header/Header"
 import RippleCard from "../components/RippleCard"
+import Courses from "@/components/main/courses/Courses"
 
 const HomePage = () => {
   const { t } = useTranslation()
@@ -12,6 +13,7 @@ const HomePage = () => {
           {t("hello")}
         </h1>
         <RippleCard />
+        <Courses />
       </main>
     </>
   )
