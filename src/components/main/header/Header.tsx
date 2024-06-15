@@ -1,9 +1,17 @@
 import { useState } from "react"
 import LanguageSwitcher from "./LanguageSwitcher"
+import { Button } from "@/components/ui/button.tsx"
+import { CustomModal } from "@/components/ui/CustomModal.tsx";
+import { LoginForm } from "@/components/LoginForm/LoginForm.tsx";
 import MobileMenu from "@/components/main/header/MobileMenu"
 
 const Header = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false)
+    const [isOpenmodal, setIsOpenModal] = useState(false)
+  
+  const handleOpenModal = () => {
+    setIsOpenModal(true)
+  }
   
   return (
     <header className="flex h-[64px] w-full items-center justify-between bg-graphite px-4 py-[17px]  xl:px-[40px] 3xl:px-[80px]">
@@ -21,7 +29,9 @@ const Header = () => {
             <img src="/images/header/chat.png" alt="chat" />
           </li>
           <li>
-            <img src="/images/header/user.png" alt="profile" />
+            <Button variant="default" size={"sm"} onClick={handleOpenModal}>
+          <img src="/images/header/user.png" alt="profile"/>
+        </Button>
           </li>
         </ul>
         <button className="md:hidden" onClick={() => setOpenMobileMenu(true)}>
@@ -32,6 +42,9 @@ const Header = () => {
           setOpenMobileMenu={setOpenMobileMenu}
         />
       </nav>
+      <CustomModal isOpen={isOpenmodal} onClose={() => setIsOpenModal(false)}>
+        <LoginForm />
+      </CustomModal>
     </header>
   )
 }
