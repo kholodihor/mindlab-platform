@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <main className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-2 bg-black">
+      <main className="relative flex min-h-[70vh] w-full flex-col items-center justify-center gap-2 bg-black">
         <h1 className="text-3xl text-[3rem] font-light text-violet">
           {t("hello")}
         </h1>
