@@ -1,14 +1,13 @@
+import { useState } from "react"
+import { useModalContext } from "@/context/ModalContext"
 import LanguageSwitcher from "./LanguageSwitcher"
 import MobileMenu from "@/components/main/header/MobileMenu"
-import { useState } from "react"
 
 const Header = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false)
+  
   return (
-    <header
-      className="flex h-[64px] w-full items-center justify-between bg-graphite px-4 py-[17px] 
-    xl:px-[40px] 3xl:px-[80px]"
-    >
+    <header className="flex h-[64px] w-full items-center justify-between bg-graphite px-4 py-[17px]  xl:px-[40px] 3xl:px-[80px]">
       <img src="/images/header/logo.png" alt="ML" className="hidden md:block" />
       <img src="/images/header/mobile.png" alt="ML" className="md:hidden" />
       <nav>
