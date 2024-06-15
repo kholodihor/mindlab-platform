@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useModalContext } from "@/context/ModalContext"
 import LanguageSwitcher from "./LanguageSwitcher"
 import MobileMenu from "@/components/main/header/MobileMenu"
 
