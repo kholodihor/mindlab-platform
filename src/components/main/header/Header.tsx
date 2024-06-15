@@ -1,9 +1,10 @@
-import { useModalContext } from "@/context/ModalContext"
+import { useState } from "react"
 import LanguageSwitcher from "./LanguageSwitcher"
 import MobileMenu from "@/components/main/header/MobileMenu"
 
 const Header = () => {
-  const { openModal } = useModalContext()
+  const [openMobileMenu, setOpenMobileMenu] = useState(false)
+  
   return (
     <header className="flex h-[64px] w-full items-center justify-between bg-graphite px-4 py-[17px]  xl:px-[40px] 3xl:px-[80px]">
       <img src="/images/header/logo.png" alt="ML" className="hidden md:block" />
@@ -23,10 +24,13 @@ const Header = () => {
             <img src="/images/header/user.png" alt="profile" />
           </li>
         </ul>
-        <button className="md:hidden" onClick={() => openModal("mobile-menu")}>
+        <button className="md:hidden" onClick={() => setOpenMobileMenu(true)}>
           <img src="/images/header/bars.png" alt="" />
         </button>
-        <MobileMenu modalKey="mobile-menu" />
+        <MobileMenu
+          openMobileMenu={openMobileMenu}
+          setOpenMobileMenu={setOpenMobileMenu}
+        />
       </nav>
     </header>
   )
