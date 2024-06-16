@@ -1,3 +1,10 @@
 {
-  "hello": "hello"
+  "hello": "hello",
+  "mobileMenu": {
+    "profile": "Profile",
+    "notifications": "Notifications",
+    "messages": "Messages",
+    "support": "Support",
+    "website": "Website"
+  }
 }

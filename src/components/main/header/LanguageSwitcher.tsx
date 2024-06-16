@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ activeColor }: { activeColor: string }) => {
   const { i18n } = useTranslation()
 
   return (
@@ -9,7 +9,7 @@ const LanguageSwitcher = () => {
         type="submit"
         onClick={() => i18n.changeLanguage("en")}
         className={`text-gray cursor-pointer border-none text-[16px] 
-            ${i18n.resolvedLanguage === "en" && "text-lightViolet"}`}
+            ${i18n.resolvedLanguage === "en" && activeColor}`}
       >
         ENG
       </button>
@@ -18,7 +18,7 @@ const LanguageSwitcher = () => {
         type="submit"
         onClick={() => i18n.changeLanguage("ua")}
         className={`text-gray cursor-pointer border-none text-[16px] 
-            ${i18n.resolvedLanguage === "ua" && "text-lightViolet"}`}
+            ${i18n.resolvedLanguage === "ua" && activeColor}`}
       >
         УКР
       </button>

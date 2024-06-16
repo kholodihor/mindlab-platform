@@ -59,6 +59,14 @@
     --peach: 18, 100%, 86%;
     --beige: 36, 100%, 91%;
     --oswald: "Oswald", sans-serif;
+
+      --bg-color-modal:rgba(170, 174, 223, 1);
+      --overlay-modal: rgba(0, 0, 0, 0.8);
+      --error: #DA3C3C;
+  ;
+
+      /*  Z-indexes*/
+      --z-index-modal: 100;
   }
 }
 
@@ -131,5 +139,16 @@ body {
 
   100% {
     transform: translate(-100%, 0);
+  }
+}
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
