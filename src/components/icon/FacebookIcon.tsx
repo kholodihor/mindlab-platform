@@ -1,5 +1,3 @@
-import exp from "constants"
-
 const FacebookIcon = () => {
   return (
     <svg
