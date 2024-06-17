@@ -8,6 +8,10 @@ import RippleCard from "../components/RippleCard"
 const HomePage = () => {
   const { t } = useTranslation()
   const { modals, closeModal } = useModalContext()
+
+  const handleClickModal = () => {
+    closeModal("login")
+  }
   return (
     <>
       <Header />
@@ -16,11 +20,8 @@ const HomePage = () => {
           {t("hello")}
         </h1>
         <RippleCard />
-        <CustomModal
-          isOpen={modals["login"]}
-          onClose={() => closeModal("login")}
-        >
-          <LoginForm />
+        <CustomModal isOpen={modals["login"]} onClose={handleClickModal}>
+          <LoginForm handleClickModal={handleClickModal} />
         </CustomModal>
       </main>
     </>

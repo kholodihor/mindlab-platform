@@ -1,7 +1,7 @@
 import * as Yup from "yup"
 
 export const LoginSchema = Yup.object().shape({
-  name: Yup.string()
+  email: Yup.string()
     .min(3, "more than 3 characters")
     .max(150, "less than 150 characters")
     .trim()

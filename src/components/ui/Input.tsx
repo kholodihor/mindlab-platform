@@ -1,19 +1,18 @@
-import { UseFormRegister, UseFormWatch } from "react-hook-form";
-import { useState } from "react";
-import { EyeOpen } from "@/components/svg/EyeOpen.tsx";
+import { UseFormRegister, UseFormWatch } from "react-hook-form"
+import { useState } from "react"
+import { EyeOpen } from "@/components/svg/EyeOpen.tsx"
 
 interface InputProps {
   label: string
   icon?: JSX.Element
   type: string
   togglePasswordVisibility?: () => void
-  register: UseFormRegister<{ name: string; password: string }>
-  name: "name" | "password"
-  watch: UseFormWatch<{ name: string; password: string }>
+  register: UseFormRegister<{ email: string; password: string }>
+  name: "email" | "password"
+  watch: UseFormWatch<{ email: string; password: string }>
 }
 
-export const Input = (
-  {
+export const Input = ({
   label,
   icon,
   type,

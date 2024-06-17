@@ -11,19 +11,24 @@ import { SerializedError } from "@reduxjs/toolkit"
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query"
 import { useDispatch } from "react-redux"
 import { saveToken } from "@/store/features/authSlice.ts"
+import { ButtonLogin } from "@/components/main/login/ButtonLogin.tsx";
 
 interface User {
-  name: string
+  email: string
   password: string
 }
 
 interface FetchData {
-  token?: string
+  accessToken?: string
 }
 
 const customId = "toastId"
 
-export const BlockForm = () => {
+export const BlockForm = ({
+  handleClickModal
+}: {
+  handleClickModal: () => void
+}) => {
   const {
     register,
     handleSubmit,
@@ -42,24 +47,24 @@ export const BlockForm = () => {
   const onSubmit = async (user: User): Promise<void> => {
     try {
       const response:
-        | {
-            data: FetchData
-          }
+        | { data: FetchData }
         | { error?: FetchBaseQueryError | SerializedError | undefined } =
         await login(user)
 
-      if (response && "error" in response) {
-        toast.error("Упс, щось пішло не так", {
+      if ("error" in response) {
+        // @ts-expect-error TODO fix data type
+        toast.error(response?.error?.data?.message, {
           toastId: customId
         })
       }
 
-      if (response && "data" in response) {
-        dispatch(saveToken(response.data.token))
+      if ("data" in response) {
+        dispatch(saveToken(response.data.accessToken?.split(" ")[1]))
         reset()
-        toast.success("Вітаю тебе, Друже!", {
+        toast.success("Login success", {
           toastId: customId
         })
+        handleClickModal()
       }
     } catch (error: any) {
       toast.error(error.message, {
@@ -88,19 +93,19 @@ export const BlockForm = () => {
           <ul className={"mb-16 flex flex-col gap-12"}>
             <li>
               <Input
-                label={"Ім’я"}
-                type={"text"}
+                label={"Email"}
+                type={"email"}
                 register={register}
-                name="name"
+                name="email"
                 watch={watch}
               />
-              {errors.name && (
+              {errors.email && (
                 <span
                   className={
                     "absolute text-[14px] font-normal leading-[150%] text-[var(--error)]"
                   }
                 >
-                  {errors.name.message}
+                  {errors.email.message}
                 </span>
               )}
             </li>
@@ -125,15 +130,7 @@ export const BlockForm = () => {
               )}
             </li>
           </ul>
-          <Button
-            type="submit"
-            variant={"outline"}
-            className={
-              "mb-6 flex h-12 w-full cursor-pointer items-center justify-center rounded-[6px] bg-black p-[18px_24px] text-[18px] font-medium text-white"
-            }
-          >
-            Увійти
-          </Button>
+          <ButtonLogin />
           <Button
             type="button"
             variant={"outline"}
