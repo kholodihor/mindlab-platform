@@ -83,6 +83,64 @@ body {
   }
 }
 
+.running-line-container {
+  background: #212121;
+  overflow: hidden;
+  height: 64px;
+  color: aliceblue;
+  position: relative;
+  margin-bottom: 15px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    height: 64px;
+    transform: translateX(100%);
+
+    p {
+      width: 293px;
+      @media screen and (min-width: 430px) {
+        width: 330px;
+      }
+      @media screen and (min-width: 744px) {
+        width: 425px;
+      }
+    }
+  }
+
+
+  .ticker-wrapper__first-half, .ticker-wrapper__second-half {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: ticker 60s infinite linear forwards;
+  }
+
+  .ticker-wrapper__second-half {
+    animation: 60s ticker 30s infinite linear forwards;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate(100%, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

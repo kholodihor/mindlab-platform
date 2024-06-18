@@ -4,6 +4,7 @@ import { LoginForm } from "@/components/main/login/LoginForm"
 import { CustomModal } from "@/components/ui/CustomModal"
 import Header from "@/components/main/header/Header"
 import RippleCard from "../components/RippleCard"
+import Footer from "@/components/footer/Footer"
 
 const HomePage = () => {
   const { t } = useTranslation()
@@ -23,6 +24,7 @@ const HomePage = () => {
           <LoginForm />
         </CustomModal>
       </main>
+      <Footer />
     </>
   )
 }
