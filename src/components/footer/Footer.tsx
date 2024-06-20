@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <RunningLine />
-      <div className="flex items-start justify-between px-[14px] sm:px-5 xl:px-10">
+      <div className="flex items-start justify-between px-[14px] sm:px-5 xl:px-10 3xl:px-20">
         <div className="flex w-[127px] flex-wrap  gap-[23px] md:w-[600px] md:flex-nowrap md:items-start md:justify-between md:gap-0">
           <div className="flex flex-wrap  text-sm md:w-[241px] md:gap-2">
             <a href="tel: +380999999999">+38099 999 99 99</a>
