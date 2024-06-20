@@ -8,7 +8,7 @@
       { "id": "in2", "title": "8 лекцій" },
       { "id": "in3", "title": "8 спікерів" }
     ],
-    "img_url": "/public/images/courses/lap.png",
+    "img_url": "/images/courses/lap.png",
     "gradient": {
       "color1": "rgba(190, 237, 59, 0.14)",
       "color2": "rgba(108, 135, 34, 0))"

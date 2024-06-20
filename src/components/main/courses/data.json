@@ -9,7 +9,7 @@
       { "id": "in2", "title": "#FE/BE" },
       { "id": "in3", "title": "#Digital Marketing" }
     ],
-    "img_url": "/public/images/courses/1.png",
+    "img_url": "/images/courses/1.png",
     "gradient": {
       "color1": "rgba(3, 170, 137, 0.20)",
       "color2": "rgba(3, 170, 137, 0)"
@@ -27,7 +27,7 @@
       { "id": "in2", "title": "#FE/BE" },
       { "id": "in3", "title": "#Digital Marketing" }
     ],
-    "img_url": "/public/images/courses/4.png",
+    "img_url": "/images/courses/4.png",
     "gradient": {
       "color1": "rgba(141, 131, 255, 0.23)",
       "color2": "rgba(141, 131, 255, 0)"
@@ -44,7 +44,7 @@
       { "id": "in2", "title": "#FE/BE" },
       { "id": "in3", "title": "#Digital Marketing" }
     ],
-    "img_url": "/public/images/courses/2.png",
+    "img_url": "/images/courses/2.png",
     "gradient": {
       "color1": "rgba(170, 174, 223, 0.31)",
       "color2": "rgba(170, 174, 223, 0)"
@@ -61,7 +61,7 @@
       { "id": "in2", "title": "#FE/BE" },
       { "id": "in3", "title": "#Digital Marketing" }
     ],
-    "img_url": "/public/images/courses/3.png",
+    "img_url": "/images/courses/3.png",
     "gradient": {
       "color1": "rgba(20, 127, 217, 0.42)",
       "color2": "rgba(22, 145, 247, 0)"
@@ -78,7 +78,7 @@
       { "id": "in2", "title": "#FE/BE" },
       { "id": "in3", "title": "#Digital Marketing" }
     ],
-    "img_url": "/public/images/courses/5.png",
+    "img_url": "/images/courses/5.png",
     "gradient": {
       "color1": "rgba(255, 236, 208, 0.17)",
       "color2": "rgba(255, 236, 208, 0)"
