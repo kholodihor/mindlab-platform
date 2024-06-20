@@ -1,6 +1,6 @@
 [
   {
-    "id": "id-1",
+    "id": "_id-1",
     "title": "Career guidance ",
     "items": "Ознайомся з популярними професіями",
     "info": [
@@ -12,6 +12,7 @@
     "gradient": {
       "color1": "rgba(190, 237, 59, 0.14)",
       "color2": "rgba(108, 135, 34, 0))"
-    }
+    },
+    "hover": "#FFE732"
   }
 ]

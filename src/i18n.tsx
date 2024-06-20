@@ -10,12 +10,11 @@ i18n
   .init({
     fallbackLng: "ua",
     resources: {
-      en: {
-        translation: enJSON
-      },
-      ua: {
-        translation: uaJSON
-      }
+      en: enJSON,
+      ua: uaJSON
     },
-    lng: "ua"
+    lng: "ua",
+    interpolation: {
+      escapeValue: false // React already escapes output
+    }
   })

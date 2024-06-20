@@ -5,5 +5,12 @@
       "title": "Наші курси",
       "sale": "Безкоштовно"
     }
+  },
+  "mobileMenu": {
+    "profile": "Профіль",
+    "notifications": "Сповіщення",
+    "messages": "Повідомлення",
+    "support": "Підтримка",
+    "website": "Веб сайт"
   }
 }

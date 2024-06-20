@@ -5,5 +5,12 @@
       "title": "Our courses",
       "sale": "Free"
     }
+  },
+  "mobileMenu": {
+    "profile": "Profile",
+    "notifications": "Notifications",
+    "messages": "Messages",
+    "support": "Support",
+    "website": "Website"
   }
 }

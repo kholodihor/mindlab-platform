@@ -11,9 +11,28 @@
     ],
     "img_url": "/public/images/courses/1.png",
     "gradient": {
-      "color1": "rgba(3, 170, 137, 0.26)",
+      "color1": "rgba(3, 170, 137, 0.20)",
       "color2": "rgba(3, 170, 137, 0)"
-    }
+    },
+    "hover": "#03AA89"
+  },
+
+  {
+    "id": "id-4",
+    "title": "Leadership",
+    "time": "3 місяці",
+    "lesson": "8 занять ",
+    "skills": [
+      { "id": "in1", "title": "#UI/UX Design" },
+      { "id": "in2", "title": "#FE/BE" },
+      { "id": "in3", "title": "#Digital Marketing" }
+    ],
+    "img_url": "/public/images/courses/4.png",
+    "gradient": {
+      "color1": "rgba(141, 131, 255, 0.23)",
+      "color2": "rgba(141, 131, 255, 0)"
+    },
+    "hover": "#8D83FF"
   },
   {
     "id": "id-2",
@@ -29,7 +48,8 @@
     "gradient": {
       "color1": "rgba(170, 174, 223, 0.31)",
       "color2": "rgba(170, 174, 223, 0)"
-    }
+    },
+    "hover": "#AAAEDF"
   },
   {
     "id": "id-3",
@@ -45,23 +65,8 @@
     "gradient": {
       "color1": "rgba(20, 127, 217, 0.42)",
       "color2": "rgba(22, 145, 247, 0)"
-    }
-  },
-  {
-    "id": "id-4",
-    "title": "Leadership",
-    "time": "3 місяці",
-    "lesson": "8 занять ",
-    "skills": [
-      { "id": "in1", "title": "#UI/UX Design" },
-      { "id": "in2", "title": "#FE/BE" },
-      { "id": "in3", "title": "#Digital Marketing" }
-    ],
-    "img_url": "/public/images/courses/4.png",
-    "gradient": {
-      "color1": "rgba(141, 131, 255, 0.23)",
-      "color2": "rgba(141, 131, 255, 0)"
-    }
+    },
+    "hover": "#147FD9"
   },
   {
     "id": "id-5",
@@ -77,6 +82,7 @@
     "gradient": {
       "color1": "rgba(255, 236, 208, 0.17)",
       "color2": "rgba(255, 236, 208, 0)"
-    }
+    },
+    "hover": "#FF737B"
   }
 ]
