@@ -22,7 +22,7 @@ const Cards = ({ data }: { data: CardsResponse[] }) => {
             onMouseEnter={() => handleMouseEnter(item.id)}
             onMouseLeave={handleMouseLeave}
             key={item.id}
-            className={`relative z-10  h-[335px]  w-[573px] cursor-pointer overflow-hidden bg-[#202227] px-[32px]  py-[24px]`}
+            className={` relative z-10   h-[170px] w-[292px] cursor-pointer overflow-hidden bg-[#202227] px-8 px-[18px] py-4 sm:h-[228px] sm:w-[390px] sm:px-[22px] sm:py-[24px]  md:h-[200px] md:w-[342px] md:px-[20px] md:py-[22px] xl:h-[226px] xl:w-[387px] xl:px-[22px] 3xl:h-[242px] 3xl:w-[413px] 3xl:py-4 3xl:py-6 5xl:h-[335px] 5xl:w-[573px] `}
             style={{
               background: `radial-gradient(circle at ${
                 index % 2 === 0 ? "left bottom" : "left top"
@@ -37,9 +37,7 @@ const Cards = ({ data }: { data: CardsResponse[] }) => {
             <img
               src={item.img_url}
               alt={item.title}
-              width={220}
-              height={230}
-              className={`absolute  ${
+              className={`absolute h-[147px] w-[126px] sm:h-[196px] sm:w-[168px] md:h-[172px] md:w-[148px] xl:h-[194px] xl:w-[167px] 3xl:h-[208px] 3xl:w-[178px] 5xl:w-[248px] 5xl:h-[288px]${
                 index % 2 === 0
                   ? "bottom-0 left-[17px]"
                   : "bottom-0 right-[17px]"
