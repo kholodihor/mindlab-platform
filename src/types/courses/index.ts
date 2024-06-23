@@ -1,9 +1,9 @@
-export type Info = {
+export interface Info {
   id: string
   title: string
 }
 
-export type SaleCard = {
+export interface SaleCard {
   id: string
   title: string
   items: string
@@ -16,12 +16,28 @@ export type SaleCard = {
   hover: string
 }
 
-export type CardsResponse = {
+export interface CardsResponse {
   id: string
   title: string
   time: string
   lesson: string
   skills: Info[]
+  img_url: string
+  gradient: {
+    color1: string
+    color2: string
+  }
+  hover: string
+}
+export interface CardData {
+  type: string
+  id: string
+  title: string
+  items?: string
+  info?: Info[]
+  time?: string
+  lesson?: string
+  skills?: Info[]
   img_url: string
   gradient: {
     color1: string

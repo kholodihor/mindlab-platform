@@ -1,10 +1,10 @@
 "use client"
 
-import { SaleCard } from "@/types/courses"
+import { CardData } from "@/types/courses"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
-const SaleCards = ({ data }: { data: SaleCard[] }) => {
+const SaleCards = ({ data }: { data: CardData[] }) => {
   const { t } = useTranslation("Main")
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
 
@@ -39,26 +39,27 @@ const SaleCards = ({ data }: { data: SaleCard[] }) => {
             />
             <div className="absolute">
               <h2
-                className={`mb-0.5 font-['Oswald',_sans-serif] text-lg font-medium uppercase leading-[1.5] sm:text-[22px]  md:text-xl xl:text-[22px] 3xl:text-2xl  5xl:mb-1 5xl:text-[32px] ${hoveredCard === item.id && "text-black"}`}
+                className={`mb-0.5 font-['Oswald',_sans-serif] text-lg font-medium uppercase leading-[1.5] transition-all duration-500 sm:text-[22px]  md:text-xl xl:text-[22px] 3xl:text-2xl  5xl:mb-1 5xl:text-[32px] ${hoveredCard === item.id && "text-black"}`}
               >
                 {item.title}
               </h2>
               <p
-                className={`mb-4 font-['Inter',_sans-serif] text-xs  leading-[1.5] sm:mb-6 sm:text-sm md:mb-[19px] md:text-xs xl:mb-[30px] 3xl:mb-7 3xl:text-sm 5xl:mb-[49px] 5xl:text-lg ${hoveredCard === item.id && "text-black"}`}
+                className={`mb-4 font-['Inter',_sans-serif] text-xs leading-[1.5] transition-all  duration-500 sm:mb-6 sm:text-sm md:mb-[19px] md:text-xs xl:mb-[30px] 3xl:mb-7 3xl:text-sm 5xl:mb-[49px] 5xl:text-lg ${hoveredCard === item.id && "text-black"}`}
               >
                 {item.items}
               </p>
               <div className="absolute ml-[148px] sm:ml-[186px] md:ml-[163px] xl:ml-48 3xl:ml-[205px] 5xl:ml-[274px]">
                 <ul className=" mb-1  sm:mb-2  xl:mb-[20px]   5xl:mb-6 ">
-                  {item?.info.map((it) => (
-                    <li key={it.id}>
-                      <p
-                        className={`font-['Inter',_sans-serif] text-[10px] leading-[1.5]  tracking-[0px]  transition-all duration-500 sm:text-sm md:text-xs 3xl:text-sm 5xl:text-lg ${hoveredCard === item.id && "text-black"}`}
-                      >
-                        {it.title}
-                      </p>
-                    </li>
-                  ))}
+                  {item.info &&
+                    item?.info.map((it) => (
+                      <li key={it.id}>
+                        <p
+                          className={`font-['Inter',_sans-serif] text-[10px] leading-[1.5]  tracking-[0px]  transition-all duration-500 sm:text-sm md:text-xs 3xl:text-sm 5xl:text-lg ${hoveredCard === item.id && "text-black"}`}
+                        >
+                          {it.title}
+                        </p>
+                      </li>
+                    ))}
                 </ul>
                 <p
                   className={`text-base font-medium leading-[2.1] transition-all duration-500 sm:text-xl md:text-lg 3xl:text-xl 5xl:text-[28px]  ${hoveredCard === item.id ? "text-black" : "text-lime"}`}
