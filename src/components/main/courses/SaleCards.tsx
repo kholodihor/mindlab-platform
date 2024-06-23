@@ -35,35 +35,37 @@ const SaleCards = ({ data }: { data: SaleCard[] }) => {
             <img
               src={item.img_url}
               alt={item.title}
-              width={247}
-              height={288}
-              className="absolute bottom-0 left-[17px]"
+              className="absolute bottom-0 left-[17px] max-h-[147px] w-[126px] sm:max-h-[196px] sm:w-[168px] md:max-h-[172px] md:w-[148px] xl:max-h-[194px] xl:w-[167px] 3xl:max-h-[208px] 3xl:w-[178px] 5xl:max-h-[288px] 5xl:w-[248px]"
             />
             <div className="absolute">
               <h2
-                className={` mb-[4px] font-['Oswald',_sans-serif] text-[32px] font-medium uppercase  leading-[1.5] transition-all duration-500 ${hoveredCard === item.id && "text-black"}`}
+                className={`mb-0.5 font-['Oswald',_sans-serif] text-lg font-medium uppercase leading-[1.5] sm:text-[22px]  md:text-xl xl:text-[22px] 3xl:text-2xl  5xl:mb-1 5xl:text-[32px] ${hoveredCard === item.id && "text-black"}`}
               >
                 {item.title}
               </h2>
-              <p className=" mb-[49px] text-[18px]  leading-[1.5]">
+              <p
+                className={`mb-4 font-['Inter',_sans-serif] text-xs  leading-[1.5] sm:mb-6 sm:text-sm md:mb-[19px] md:text-xs xl:mb-[30px] 3xl:mb-7 3xl:text-sm 5xl:mb-[49px] 5xl:text-lg ${hoveredCard === item.id && "text-black"}`}
+              >
                 {item.items}
               </p>
-              <ul className="absolute mb-[24px] ml-[247px]">
-                {item?.info.map((it) => (
-                  <li key={it.id}>
-                    <p
-                      className={` text-[18px]  leading-[1.5] tracking-[0px] transition-all duration-500 ${hoveredCard === item.id && "text-black"}`}
-                    >
-                      {it.title}
-                    </p>
-                  </li>
-                ))}
+              <div className="absolute ml-[148px] sm:ml-[186px] md:ml-[163px] xl:ml-48 3xl:ml-[205px] 5xl:ml-[274px]">
+                <ul className=" mb-1  sm:mb-2  xl:mb-[20px]   5xl:mb-6 ">
+                  {item?.info.map((it) => (
+                    <li key={it.id}>
+                      <p
+                        className={`font-['Inter',_sans-serif] text-[10px] leading-[1.5]  tracking-[0px]  transition-all duration-500 sm:text-sm md:text-xs 3xl:text-sm 5xl:text-lg ${hoveredCard === item.id && "text-black"}`}
+                      >
+                        {it.title}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
                 <p
-                  className={`text-[28px] font-medium leading-[2.1] transition-all duration-500  ${hoveredCard === item.id ? "text-black" : "text-lime"}`}
+                  className={`text-base font-medium leading-[2.1] transition-all duration-500 sm:text-xl md:text-lg 3xl:text-xl 5xl:text-[28px]  ${hoveredCard === item.id ? "text-black" : "text-lime"}`}
                 >
                   {t("courses_section.sale")}
                 </p>
-              </ul>
+              </div>
             </div>
           </li>
         )
