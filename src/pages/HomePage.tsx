@@ -4,6 +4,7 @@ import { LoginForm } from "@/components/main/login/LoginForm"
 import { CustomModal } from "@/components/ui/CustomModal"
 import Header from "@/components/main/header/Header"
 import RippleCard from "../components/RippleCard"
+import Courses from "@/components/main/courses/Courses"
 import Footer from "@/components/footer/Footer"
 
 const HomePage = () => {
@@ -17,6 +18,7 @@ const HomePage = () => {
           {t("hello")}
         </h1>
         <RippleCard />
+        <Courses />
         <CustomModal
           isOpen={modals["login"]}
           onClose={() => closeModal("login")}

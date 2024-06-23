@@ -1,5 +1,11 @@
 {
   "hello": "hello",
+  "Main": {
+    "courses_section": {
+      "title": "Our courses",
+      "sale": "Free"
+    }
+  },
   "mobileMenu": {
     "profile": "Profile",
     "notifications": "Notifications",
