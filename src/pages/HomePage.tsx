@@ -5,7 +5,7 @@ import { CustomModal } from "@/components/ui/CustomModal"
 import Header from "@/components/main/header/Header"
 import RippleCard from "../components/RippleCard"
 import Courses from "@/components/main/courses/Courses"
-import Footer from "@/components/footer/Footer"
+import Footer from "@/components/main/footer/Footer"
 
 const HomePage = () => {
   const { t } = useTranslation()

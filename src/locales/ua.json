@@ -12,5 +12,10 @@
     "messages": "Повідомлення",
     "support": "Підтримка",
     "website": "Веб сайт"
+  },
+  "Footer": {
+"runningLight": "наші контакти",
+"support": "підтримка:",
+"copyright": "Усі права захищено"
   }
 }

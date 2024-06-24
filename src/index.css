@@ -88,7 +88,13 @@ body {
   height: 64px;
   color: aliceblue;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  @media screen and (min-width: 430px) {
+    margin-bottom: 8px;
+  }
+  @media screen and (min-width: 744px) {
+    height: 94px;
+  }
 
   div {
     display: flex;
@@ -98,6 +104,9 @@ body {
     overflow: hidden;
     height: 64px;
     transform: translateX(100%);
+    @media screen and (min-width: 744px) {
+      height: 94px;
+    }
 
     p {
       width: 293px;
@@ -106,6 +115,9 @@ body {
       }
       @media screen and (min-width: 744px) {
         width: 425px;
+      }
+      @media screen and (min-width: 1280px) {
+        width: 690px;
       }
     }
   }
