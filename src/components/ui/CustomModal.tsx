@@ -1,7 +1,7 @@
 import Modal from "react-modal"
 import React from "react"
-import {Close} from "@/components/svg/Close.tsx";
-import { Button } from "@/components/ui/button.tsx";
+import { Close } from "@/components/svg/Close.tsx"
+import { Button } from "@/components/ui/button.tsx"
 
 interface CustomModalProps {
   isOpen: boolean
