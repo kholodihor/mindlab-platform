@@ -1,10 +1,10 @@
 "use client"
 import Calendar from "@/components/icons/Calendar"
 import Clock from "@/components/icons/Clock"
-import { CardsResponse } from "@/types/courses"
+import { CardData } from "@/types/courses"
 import { useState } from "react"
 
-const Cards = ({ data }: { data: CardsResponse[] }) => {
+const Cards = ({ data }: { data: CardData[] }) => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
 
   const handleMouseEnter = (cardId: string) => {
@@ -37,56 +37,57 @@ const Cards = ({ data }: { data: CardsResponse[] }) => {
             <img
               src={item.img_url}
               alt={item.title}
-              className={`absolute h-[147px] w-[126px] sm:h-[196px] sm:w-[168px] md:h-[172px] md:w-[148px] xl:h-[194px] xl:w-[167px] 3xl:h-[208px] 3xl:w-[178px] 5xl:w-[248px] 5xl:h-[288px]${
-                index % 2 === 0
-                  ? "bottom-0 left-[17px]"
-                  : "bottom-0 right-[17px]"
+              className={`absolute bottom-0  max-h-[288px] w-[135px]  sm:w-[182px]  md:w-[159px]  xl:w-[179px] 3xl:w-[192px] 5xl:w-[266px] ${
+                index % 2 === 0 ? "bottom-0 left-0" : "bottom-0 right-0"
               }`}
             />
-            <div className="absolute">
+            <div className="absolute ">
               <h2
-                className={` mb-[67px] font-['Oswald',_sans-serif] text-[32px] font-medium uppercase  leading-[1.5]  ${hoveredCard === item.id && "text-black "}`}
+                className={`mb-[23px] font-['Oswald',_sans-serif] text-lg font-medium uppercase leading-[1.5] transition-all duration-500 sm:mb-[34px] sm:text-[22px] md:mb-[29px] md:text-xl xl:mb-[39px]  xl:text-[22px] 3xl:mb-[51px] 3xl:text-2xl  5xl:mb-[67px] 5xl:text-[32px] ${hoveredCard === item.id && "text-black"}`}
               >
                 {item.title}
               </h2>
 
               <div
                 className={`flex gap-[32px]  ${
-                  index % 2 === 0 ? "ml-[247px]" : "mr-[247px]"
+                  index % 2 === 0
+                    ? "ml-[164px] sm:ml-[182px] md:ml-[159px] xl:ml-[179px] 3xl:ml-[192px]  5xl:ml-[266px]"
+                    : "mr-[164px] sm:mr-[182px] md:mr-[159px] xl:mr-[179px] 3xl:mr-[192px]  5xl:mr-[266px]"
                 }`}
               >
                 <div>
                   <ul
-                    className={`mb-[32px] ${hoveredCard === item.id && "text-black "}`}
+                    className={`xl:md-[22px] mb-4 transition-all duration-500 sm:mb-[22px] md:mb-[20px] 3xl:mb-6 5xl:mb-[32px] ${hoveredCard === item.id && "text-black "}`}
                   >
                     <li className="flex items-center gap-[8px]">
                       <Clock
-                        className={`h-[14px] w-[14px] fill-none  ${hoveredCard === item.id ? "stroke-black" : "stroke-white "}`}
+                        className={`5xl:h-[12px h-[8px] w-[8px] fill-none transition-all duration-500 sm:h-[10px] sm:w-[10px] md:h-[9px]  md:w-[9px]  ${hoveredCard === item.id ? "stroke-black" : "stroke-white "}`}
                       />
-                      <p className="font-['Inter',_sans-serif] text-[16px] font-light  leading-[1.5] tracking-[0px]">
+                      <p className="font-['Inter',_sans-serif] text-[10px] font-light leading-[1.5] tracking-[0px] sm:text-xs  md:text-[10px] xl:text-xs 5xl:text-base">
                         {item.time}
                       </p>
                     </li>
                     <li className="flex items-center gap-[8px]">
                       <Calendar
-                        className={`h-[14px] w-[14px] fill-none  ${hoveredCard === item.id ? "stroke-black" : "stroke-white "}`}
+                        className={`h-[8px] w-[8px] fill-none transition-all duration-500 sm:h-[10px] sm:w-[10px] md:h-[9px] md:w-[9px]  5xl:h-[12px] ${hoveredCard === item.id ? "stroke-black" : "stroke-white "}`}
                       />
-                      <p className="font-['Inter',_sans-serif] text-[16px] font-light  leading-[1.5] tracking-[0px]">
+                      <p className="font-['Inter',_sans-serif] text-[10px] font-light leading-[1.5] tracking-[0px] sm:text-[12px] md:text-[10px] xl:text-[12px] 5xl:text-[16px]">
                         {item.lesson}
                       </p>
                     </li>
                   </ul>
                   <ul
-                    className={`flex flex-wrap gap-[8px] ${hoveredCard === item.id && "text-black "}`}
+                    className={`flex flex-wrap gap-2 ${hoveredCard === item.id && "text-black "}`}
                   >
-                    {item?.skills.map((skill) => (
-                      <li
-                        key={skill.id}
-                        className={`rounded-[6px] px-[16px] py-[7.5px]  ${hoveredCard === item.id ? "[border:1px_solid_black]" : "[border:1px_solid_#eaeaeb]"}`}
-                      >
-                        {skill.title}
-                      </li>
-                    ))}
+                    {item.skills &&
+                      item?.skills.map((skill) => (
+                        <li
+                          key={skill.id}
+                          className={`sm:rounded-1 mb-0 rounded-[3px] px-2 py-[3px] font-['Inter',_sans-serif] text-[8px]  leading-[1.5] tracking-[0px]  transition-all duration-500 sm:px-[11px] sm:py-[5px] sm:text-[10px] 3xl:px-3 3xl:py-[6px] 5xl:rounded-[6px] 5xl:px-3 5xl:py-[7.5px] 5xl:text-sm ${hoveredCard === item.id ? "[border:1px_solid_black]" : "[border:1px_solid_#eaeaeb]"}`}
+                        >
+                          {skill.title}
+                        </li>
+                      ))}
                   </ul>
                 </div>
               </div>

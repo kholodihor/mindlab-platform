@@ -1,40 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
-
-@font-face {
-  font-family: "Fixel Display";
-  font-weight: 100;
-  src: url("/fonts/FixelDisplay-ExtraLight.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Fixel Display";
-  font-weight: 200;
-  src: url("/fonts/FixelDisplay-Light.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Fixel Display";
-  font-weight: 300;
-  src: url("/fonts/FixelDisplay-Thin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Fixel Display";
-  font-weight: 400;
-  src: url("/fonts/FixelDisplay-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Fixel Display";
-  font-weight: 500;
-  src: url("/fonts/FixelDisplay-Medium.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Fixel Display";
-  font-weight: 700;
-  src: url("/fonts/FixelDisplay-SemiBold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Fixel Display";
-  font-weight: 800;
-  src: url("/fonts/FixelDisplay-Bold.woff2") format("woff2");
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -59,18 +24,15 @@
     --beige: 36, 100%, 91%;
     --oswald: "Oswald", sans-serif;
 
-      --bg-color-modal:rgba(170, 174, 223, 1);
-      --overlay-modal: rgba(0, 0, 0, 0.8);
-      --error: #DA3C3C;
-  ;
-
-      /*  Z-indexes*/
-      --z-index-modal: 100;
+    --bg-color-modal: rgba(170, 174, 223, 1);
+    --overlay-modal: rgba(0, 0, 0, 0.8);
+    --error: #da3c3c;
+    --z-index-modal: 100;
   }
 }
 
 body {
-  font-family: "Fixel Display", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 @layer base {
@@ -122,8 +84,8 @@ body {
     }
   }
 
-
-  .ticker-wrapper__first-half, .ticker-wrapper__second-half {
+  .ticker-wrapper__first-half,
+  .ticker-wrapper__second-half {
     display: flex;
     flex-direction: row;
     gap: 6px;
@@ -152,14 +114,13 @@ body {
     transform: translate(-100%, 0);
   }
 }
+
 @layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
-  /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
