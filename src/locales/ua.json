@@ -1,5 +1,11 @@
 {
   "hello": "привіт",
+  "Main": {
+    "courses_section": {
+      "title": "Наші курси",
+      "sale": "Безкоштовно"
+    }
+  },
   "mobileMenu": {
     "profile": "Профіль",
     "notifications": "Сповіщення",
