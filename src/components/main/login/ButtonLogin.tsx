@@ -38,7 +38,7 @@ export const ButtonLogin = () => {
 
   return (
     <button id={"login-button"} type="submit" className={styles.ripple}>
-      Увійти
+      <p  className={styles.ripple_text}>Увійти</p>
     </button>
   )
 }

@@ -79,7 +79,7 @@ export const BlockForm = ({
         <div>Завантаження...</div>
       ) : (
         <form
-          className={"w-[480px] rounded-[6px] bg-[#FFFFFF] p-[52px_60px]"}
+          className={"w-[480px] rounded-[6px] bg-[#FFFFFF] p-[23px_55px]"}
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className={"mb-10 flex flex-col gap-6 text-left"}>

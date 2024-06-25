@@ -2,6 +2,7 @@
     width: 100%;
     position: relative;
     background-color: black;
+    border-radius: 6px;
     display: inline-flex;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -11,6 +12,7 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    margin-bottom: 24px;
 }
 
 .ripple::before {
@@ -22,9 +24,8 @@
     width: 0;
     height: 0;
     border-radius: 50%;
-    background-color: green;
+    background-color: #8D83FF;
     transition: width 0.5s, height 0.5s;
-    z-index: 1;
 }
 
 .ripple:hover::before {
@@ -34,4 +35,5 @@
 
 .ripple_text {
     text-align: center;
+    z-index: 1;
 }
