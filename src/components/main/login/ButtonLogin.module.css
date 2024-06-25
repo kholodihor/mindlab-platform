@@ -1,0 +1,39 @@
+.ripple {
+    width: 100%;
+    position: relative;
+    background-color: black;
+    border-radius: 6px;
+    display: inline-flex;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: white;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.ripple::before {
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #8D83FF;
+    transition: width 0.5s, height 0.5s;
+}
+
+.ripple:hover::before {
+    width: 800px;
+    height: 800px;
+}
+
+.ripple_text {
+    text-align: center;
+    z-index: 1;
+}

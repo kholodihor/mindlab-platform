@@ -7,6 +7,10 @@ import Footer from "@/components/footer/Footer"
 
 const HomePage = () => {
   const { modals, closeModal } = useModalContext()
+
+  const handleClickModal = () => {
+    closeModal("login")
+  }
   return (
     <>
       <Header />
@@ -14,8 +18,8 @@ const HomePage = () => {
         <Courses />
       </main>
       <Footer />
-      <CustomModal isOpen={modals["login"]} onClose={() => closeModal("login")}>
-        <LoginForm />
+      <CustomModal isOpen={modals["login"]} onClose={handleClickModal}>
+        <LoginForm handleClickModal={handleClickModal}/>
       </CustomModal>
     </>
   )
