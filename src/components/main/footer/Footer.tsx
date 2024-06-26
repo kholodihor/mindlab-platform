@@ -45,7 +45,7 @@ const Footer = () => {
                   target="_blank"
                   onMouseEnter={() => setIsHovered(title)}
                   onMouseLeave={() => setIsHovered("")}
-                  className={`${style} absolute flex items-center`}
+                  className={`${style} absolute z-10 flex items-center`}
                 >
                   <div
                     className={`${isHovered === title ? "sm:border-violet sm:text-violet" : "sm:border-white sm:bg-black"} hidden h-[40px] w-[40px] items-center justify-center rounded-bl-md rounded-tl-md border-[1px] text-white sm:flex sm:bg-black 3xl:h-[48px] 3xl:w-[48px] 5xl:hidden`}
