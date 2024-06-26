@@ -1,9 +1,14 @@
+import Lottie from "lottie-react"
+import eyes from "@/animations/eyes.json"
+
 const GifBlock = () => {
   return (
     <div>
-      <div className=" bg-red absolute bottom-[6%] left-[7%] h-[40px] w-[40px] sm:bottom-[52%] sm:left-[5%] md:bottom-[3%] md:left-[20px] xl:bottom-[26px] xl:left-[36px] xl:h-[60px] xl:w-[60px] 3xl:bottom-[32px] 3xl:left-[78px] 5xl:bottom-[64px]">
-        <img src="/images/footer/eyes.svg" />
-      </div>
+      <Lottie
+        animationData={eyes}
+        loop={true}
+        className=" bg-red absolute bottom-[6%] left-[7%] h-[40px] w-[40px] sm:bottom-[52%] sm:left-[5%] md:bottom-[3%] md:left-[20px] xl:bottom-[26px] xl:left-[36px] xl:h-[60px] xl:w-[60px] 3xl:bottom-[32px] 3xl:left-[78px] 5xl:bottom-[64px]"
+      />
       <div className="absolute right-[43%] top-[41%] h-[40px] w-[40px] sm:top-[21%] md:right-[20px] md:top-[85%] xl:right-[37px] xl:top-[243px] xl:h-[60px] xl:w-[60px] 3xl:right-[79px] 3xl:top-[263px] 5xl:top-[369px]">
         <img src="/images/footer/gif/eye.gif" />
         <span className="absolute -left-[10px] -top-[10px] block h-[60px] w-[60px] rounded-full border-[10px] border-black xl:-left-[12px] xl:-top-[12px] xl:h-[85px] xl:w-[85px] xl:border-[13px]"></span>
