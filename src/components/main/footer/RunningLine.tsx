@@ -10,8 +10,9 @@ const RunningLine = () => {
           alt="Icon star"
           width={30}
           height={30}
+          className="xl:h-9 xl:w-9 3xl:h-[41px] 3xl:w-[41px]"
         />
-        <p className="text-[32px] font-semibold uppercase text-white sm:text-4xl md:text-[48px] xl:text-[80px]">
+        <p className="text-[32px] font-semibold uppercase text-white sm:text-4xl md:text-[48px] xl:text-[80px] 5xl:text-[100px]">
           {t("runningLight")}
         </p>
         <img
@@ -19,8 +20,9 @@ const RunningLine = () => {
           alt="Icon star"
           width={30}
           height={30}
+          className="xl:h-9 xl:w-9 3xl:h-[41px] 3xl:w-[41px]"
         />
-        <p className="w-[296px] text-[32px] font-semibold uppercase text-darkGray sm:text-4xl md:text-[48px] xl:text-[80px]">
+        <p className="w-[296px] text-[32px] font-semibold uppercase text-darkGray sm:text-4xl md:text-[48px] xl:text-[80px] 5xl:text-[100px]">
           {t("runningLight")}
         </p>
         <img
@@ -28,8 +30,9 @@ const RunningLine = () => {
           alt="Icon star"
           width={30}
           height={30}
+          className="xl:h-9 xl:w-9 3xl:h-[41px] 3xl:w-[41px]"
         />
-        <p className="text-[32px] font-semibold uppercase text-white sm:text-4xl md:text-[48px] xl:text-[80px]">
+        <p className="text-[32px] font-semibold uppercase text-white sm:text-4xl md:text-[48px] xl:text-[80px] 5xl:text-[100px]">
           {t("runningLight")}
         </p>
       </div>
@@ -39,8 +42,9 @@ const RunningLine = () => {
           alt="Icon star"
           width={30}
           height={30}
+          className="xl:h-9 xl:w-9 3xl:h-[41px] 3xl:w-[41px]"
         />
-        <p className="w-[296px] text-[32px] font-semibold uppercase text-darkGray sm:text-4xl md:text-[48px] xl:text-[80px]">
+        <p className="w-[296px] text-[32px] font-semibold uppercase text-darkGray sm:text-4xl md:text-[48px] xl:text-[80px] 5xl:text-[100px]">
           {t("runningLight")}
         </p>
         <img
@@ -48,8 +52,9 @@ const RunningLine = () => {
           alt="Icon star"
           width={30}
           height={30}
+          className="xl:h-9 xl:w-9 3xl:h-[41px] 3xl:w-[41px]"
         />
-        <p className="text-[32px] font-semibold uppercase text-white sm:text-4xl md:text-[48px] xl:text-[80px]">
+        <p className="text-[32px] font-semibold uppercase text-white sm:text-4xl md:text-[48px] xl:text-[80px] 5xl:text-[100px]">
           {t("runningLight")}
         </p>
         <img
@@ -57,8 +62,9 @@ const RunningLine = () => {
           alt="Icon star"
           width={30}
           height={30}
+          className="xl:h-9 xl:w-9 3xl:h-[41px] 3xl:w-[41px]"
         />
-        <p className="w-[296px] text-[32px] font-semibold uppercase text-darkGray sm:text-4xl md:text-[48px] xl:text-[80px]">
+        <p className="w-[296px] text-[32px] font-semibold uppercase text-darkGray sm:text-4xl md:text-[48px] xl:text-[80px] 5xl:text-[100px]">
           {t("runningLight")}
         </p>
       </div>

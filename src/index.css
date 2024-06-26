@@ -57,6 +57,12 @@ body {
   @media screen and (min-width: 744px) {
     height: 94px;
   }
+  @media screen and (min-width: 1440px) {
+    height: 112px;
+  }
+  @media screen and (min-width: 1920px) {
+    height: 144px;
+  }
 
   div {
     display: flex;
@@ -69,17 +75,30 @@ body {
     @media screen and (min-width: 744px) {
       height: 94px;
     }
+    @media screen and (min-width: 1440px) {
+      height: 112px;
+    }
+    @media screen and (min-width: 1920px) {
+      height: 144px;
+    }
 
     p {
-      width: 293px;
+      text-align: center;
+      width: 310px;
       @media screen and (min-width: 430px) {
-        width: 330px;
+        width: 340px;
       }
       @media screen and (min-width: 744px) {
-        width: 425px;
+        width: 445px;
       }
       @media screen and (min-width: 1280px) {
-        width: 690px;
+        width: 720px;
+      }
+      @media screen and (min-width: 1280px) {
+        width: 725px;
+      }
+      @media screen and (min-width: 1920px) {
+        width: 900px;
       }
     }
   }
