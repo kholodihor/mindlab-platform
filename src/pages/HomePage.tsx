@@ -3,7 +3,7 @@ import { LoginForm } from "@/components/main/login/LoginForm"
 import { CustomModal } from "@/components/ui/CustomModal"
 import Header from "@/components/main/header/Header"
 import Courses from "@/components/main/courses/Courses"
-import Footer from "@/components/footer/Footer"
+import Footer from "@/components/main/footer/Footer"
 
 const HomePage = () => {
   const { modals, closeModal } = useModalContext()

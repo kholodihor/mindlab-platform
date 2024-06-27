@@ -12,5 +12,10 @@
     "messages": "Messages",
     "support": "Support",
     "website": "Website"
-  }
+  },
+  "Footer": {
+    "runningLight": "our contacts",
+    "support": "support:",
+    "copyright": "All rights reserved"
+      }
 }

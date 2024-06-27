@@ -50,7 +50,19 @@ body {
   height: 64px;
   color: aliceblue;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  @media screen and (min-width: 430px) {
+    margin-bottom: 8px;
+  }
+  @media screen and (min-width: 744px) {
+    height: 94px;
+  }
+  @media screen and (min-width: 1440px) {
+    height: 112px;
+  }
+  @media screen and (min-width: 1920px) {
+    height: 144px;
+  }
 
   div {
     display: flex;
@@ -60,14 +72,33 @@ body {
     overflow: hidden;
     height: 64px;
     transform: translateX(100%);
+    @media screen and (min-width: 744px) {
+      height: 94px;
+    }
+    @media screen and (min-width: 1440px) {
+      height: 112px;
+    }
+    @media screen and (min-width: 1920px) {
+      height: 144px;
+    }
 
     p {
-      width: 293px;
+      text-align: center;
+      width: 310px;
       @media screen and (min-width: 430px) {
-        width: 330px;
+        width: 340px;
       }
       @media screen and (min-width: 744px) {
-        width: 425px;
+        width: 445px;
+      }
+      @media screen and (min-width: 1280px) {
+        width: 720px;
+      }
+      @media screen and (min-width: 1280px) {
+        width: 725px;
+      }
+      @media screen and (min-width: 1920px) {
+        width: 900px;
       }
     }
   }
