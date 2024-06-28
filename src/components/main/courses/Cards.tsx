@@ -57,7 +57,7 @@ const Cards = ({ data }: { data: CardData[] }) => {
             />
             <div className="absolute ">
               <h2
-                className={`mb-[23px] font-oswald text-lg font-medium uppercase leading-[1.5] transition-all duration-500 sm:mb-[34px] sm:text-[22px] md:mb-[29px] md:text-xl xl:mb-[39px]  xl:text-[22px] 3xl:mb-[51px] 3xl:text-2xl  5xl:mb-[67px] 5xl:text-[32px] ${hoveredCard === item.id && "text-black"}`}
+                className={`mb-[23px] font-oswald text-lg font-medium uppercase leading-[1.5] transition-all duration-1000 sm:mb-[34px] sm:text-[22px] md:mb-[29px] md:text-xl xl:mb-[39px]  xl:text-[22px] 3xl:mb-[51px] 3xl:text-2xl  5xl:mb-[67px] 5xl:text-[32px] ${hoveredCard === item.id && "text-black"}`}
               >
                 {item.title}
               </h2>
@@ -65,8 +65,8 @@ const Cards = ({ data }: { data: CardData[] }) => {
               <div
                 className={`flex gap-[32px]  ${
                   index % 2 === 0
-                    ? "ml-[164px] sm:ml-[182px] md:ml-[159px] xl:ml-[179px] 3xl:ml-[192px]  5xl:ml-[266px]"
-                    : "mr-[164px] sm:mr-[182px] md:mr-[159px] xl:mr-[179px] 3xl:mr-[192px]  5xl:mr-[266px]"
+                    ? "ml-[122.3px] sm:ml-[182px] md:ml-[159px] xl:ml-[179px] 3xl:ml-[192px]  5xl:ml-[266px]"
+                    : "mr-[122.3px] sm:mr-[182px] md:mr-[159px] xl:mr-[179px] 3xl:mr-[192px]  5xl:mr-[266px]"
                 }`}
               >
                 <div>
@@ -97,7 +97,7 @@ const Cards = ({ data }: { data: CardData[] }) => {
                       item?.skills.map((skill) => (
                         <li
                           key={skill.id}
-                          className={`sm:rounded-1 mb-0 rounded-[3px] px-2 py-[3px]  text-[8px]  leading-[1.5] tracking-[0px]  transition-all duration-1000 sm:px-[11px] sm:py-[5px] sm:text-[10px] 3xl:px-3 3xl:py-[6px] 5xl:rounded-[6px] 5xl:px-3 5xl:py-[7.5px] 5xl:text-sm ${hoveredCard === item.id ? "[border:1px_solid_black]" : "[border:1px_solid_#eaeaeb]"}`}
+                          className={`sm:rounded-1 mb-0 flex h-[18.35px] w-fit items-center rounded-[3px] px-2  text-[8px]  leading-[1.5] tracking-[0px]  transition-all duration-1000 sm:h-[24.31px] sm:px-[10.89px]  sm:text-[10px] md:h-[21.51px] md:px-[10.56px] xl:h-[24.27px] xl:px-[10.79px]  3xl:h-[25.95px] 3xl:px-3 5xl:h-[36px] 5xl:rounded-[6px] 5xl:text-sm ${hoveredCard === item.id ? "[border:1px_solid_black]" : "[border:1px_solid_#eaeaeb]"}`}
                         >
                           {skill.title}
                         </li>
