@@ -48,7 +48,7 @@ const Courses = () => {
               onClick={handleShowMore}
               className="mx-auto mt-[13.5px] flex items-center gap-3 md:hidden"
             >
-              <p className=" font-['Inter',_sans-serif] text-[16px] font-medium   leading-[1.5px] tracking-[0px]">
+              <p className=" text-base font-medium   leading-[1.5px] tracking-[0px]">
                 Показати більше
               </p>
               <Open className={`h-[24px] w-[24px] fill-none stroke-white`} />
