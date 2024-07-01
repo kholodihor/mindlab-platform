@@ -4,8 +4,10 @@ import RunningLine from "./RunningLine"
 import GifBlock from "./GifsBlock"
 import { useTranslation } from "react-i18next"
 import { useState } from "react"
+import Partners from "./Partners"
 const Footer = () => {
   const [isHovered, setIsHovered] = useState("")
+  const [showPartners, setShowPartners] = useState(false)
   const { t } = useTranslation("Footer")
   return (
     <footer>
@@ -15,20 +17,35 @@ const Footer = () => {
           <div className="flex flex-wrap  text-sm  md:gap-2 3xl:gap-[9px] 3xl:text-base 5xl:text-lg">
             <a
               href="tel: +380999999999"
-              className="block md:w-[241px] xl:w-[407px] 3xl:w-[433px] 5xl:w-[593px]"
+              className="block transition-all duration-300 hover:text-lightViolet md:w-[241px] xl:w-[407px] 3xl:w-[433px] 5xl:w-[593px]"
             >
               +38099 999 99 99
             </a>
-            <a href="tel: +380888888888">+38088 888 88 88</a>
+            <a
+              href="tel: +380888888888"
+              className="duration-300 hover:text-lightViolet"
+            >
+              +38088 888 88 88
+            </a>
           </div>
           <div className="flex flex-wrap text-sm md:w-[358px] md:gap-2 3xl:gap-[9px] 3xl:text-base 5xl:text-lg">
             <p className="md:w-[358px]">{t("support")}</p>
-            <p className="md:w-[358px]">@Mind_Lab</p>
+            <a
+              href="mailto:mind.lab.hub@gmail.com"
+              className="duration-300 hover:text-lightViolet md:w-[358px]"
+            >
+              @Mind_Lab
+            </a>
           </div>
         </div>
-        <div className="flex w-[70px] flex-wrap text-sm md:gap-2 3xl:w-[88px] 3xl:gap-[9px] 3xl:text-base 5xl:text-lg">
+        <div className="flex w-[70px] flex-wrap text-sm md:gap-[6px] 3xl:w-[88px] 3xl:gap-2 3xl:text-base 5xl:text-lg">
+          <p
+            className="cursor-pointer border-b-2 pb-[1px]"
+            onClick={() => setShowPartners(true)}
+          >
+            Партнери
+          </p>
           <p className="md:w-[125px] 5xl:w-[128px]">MIND LAB</p>
-          <p>2024</p>
         </div>
       </div>
       <div className="relative mb-4 h-[264px] sm:h-[260px] md:h-[333px] xl:mb-[18px] xl:h-[323px] 3xl:h-[355px] 5xl:mb-6 5xl:h-[493px]">
@@ -75,6 +92,7 @@ const Footer = () => {
         <p>{t("copyright")}</p>
         <p>Copyright © 2023-2024</p>
       </div>
+      <Partners isOpen={showPartners} onClosePartners={setShowPartners} />
     </footer>
   )
 }

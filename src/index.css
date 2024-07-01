@@ -134,6 +134,37 @@ body {
   }
 }
 
+.partner-popup {
+  animation: 2s partner ;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.slide-in {
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+
+.slide-out {
+  animation: slideOut 500ms ease-in-out forwards;
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
