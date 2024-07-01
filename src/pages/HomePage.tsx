@@ -19,7 +19,7 @@ const HomePage = () => {
       </main>
       <Footer />
       <CustomModal isOpen={modals["login"]} onClose={handleClickModal}>
-        <LoginForm handleClickModal={handleClickModal}/>
+        <LoginForm handleClickModal={handleClickModal} />
       </CustomModal>
     </>
   )

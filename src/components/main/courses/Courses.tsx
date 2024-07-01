@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Title from "./Title"
-import coursesSale from "./courseSale.json"
-import data from "./data.json"
+import coursesSale from "@/data/courses/courseSale.json"
+import data from "@/data/courses/data.json"
 import SaleCards from "./SaleCards"
 import Cards from "./Cards"
 import Open from "@/components/icons/Open"
@@ -48,7 +48,7 @@ const Courses = () => {
               onClick={handleShowMore}
               className="mx-auto mt-[13.5px] flex items-center gap-3 md:hidden"
             >
-              <p className=" font-['Inter',_sans-serif] text-[16px] font-medium   leading-[1.5px] tracking-[0px]">
+              <p className=" text-base font-medium   leading-[1.5px] tracking-[0px]">
                 Показати більше
               </p>
               <Open className={`h-[24px] w-[24px] fill-none stroke-white`} />
