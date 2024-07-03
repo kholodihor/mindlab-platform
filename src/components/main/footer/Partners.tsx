@@ -1,17 +1,23 @@
 import Modal from "react-modal"
 import { Dispatch, SetStateAction } from "react"
 import { partners } from "@/data/partners"
+import { useHeight } from "@/hooks/useHeight"
+import { useEffect } from "react"
 
 type PartnersProps = {
   isOpen: boolean
   onClosePartners: Dispatch<SetStateAction<boolean>>
 }
 const Partners = ({ isOpen, onClosePartners }: PartnersProps) => {
+  const currentHeight = useHeight()
+  useEffect(() => {
+    console.log(currentHeight)
+  }, [currentHeight])
   return (
     <Modal
       isOpen={isOpen}
-      className={`fixed bottom-0 right-0 z-[9999] w-[100vw] justify-end bg-black p-10 ${isOpen ? "slide-in" : "slide-out"} overflow-y-scroll md:p-[64px] 3md:bottom-[220px] xl:bottom-[240px] xl:px-[30px] xl:py-[48px] 2xl:px-[110px] 3xl:bottom-[300px]`}
-      overlayClassName="fixed top-0 left-0 w-[100vw] h-[100vh] flex flex-col items-center bg-[var(--overlay-modal)] z-[var(--z-index-modal)] overflow-y-scroll"
+      className={`${currentHeight < 480 ? "md:h-676px h-full" : ""} md:h-${currentHeight < 676 ? "full" : "auto"} fixed bottom-0 right-0 z-[9999]  w-[100vw] justify-end overflow-y-auto bg-black p-10 ${isOpen ? "slide-in" : "slide-out"} overflow-y-scroll md:p-[64px] 3md:bottom-[220px] xl:bottom-[240px] xl:px-[30px] xl:py-[48px] 2xl:px-[110px] 3xl:bottom-[300px]`}
+      overlayClassName="fixed bottom-0 left-0  w-[100vw] h-[100vh] flex flex-col items-center bg-[var(--overlay-modal)] z-[var(--z-index-modal)] overflow-y-scroll"
       ariaHideApp={false}
       closeTimeoutMS={250}
       onRequestClose={() => onClosePartners(false)}
@@ -50,7 +56,9 @@ const Partners = ({ isOpen, onClosePartners }: PartnersProps) => {
           </li>
         ))}
       </ul>
-      <p className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] sm:w-[136px] sm:text-[28px]">
+      <p
+        className={`${currentHeight < 480 ? "top-[226px] sm:top-[230px]" : "top-[50%] translate-y-[-50%]"} absolute  left-[50%]  w-[180px] translate-x-[-50%]  text-lg sm:w-[136px] sm:text-[28px]`}
+      >
         Партнери MIND LAB
       </p>
     </Modal>

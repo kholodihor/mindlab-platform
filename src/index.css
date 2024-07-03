@@ -48,7 +48,6 @@ body {
   background: #212121;
   overflow: hidden;
   height: 64px;
-  color: aliceblue;
   position: relative;
   margin-bottom: 12px;
   @media screen and (min-width: 430px) {
