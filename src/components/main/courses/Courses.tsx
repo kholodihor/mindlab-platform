@@ -12,7 +12,7 @@ const Courses = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
+      setIsMobile(window.innerWidth < 744)
     }
 
     window.addEventListener("resize", handleResize)
@@ -31,11 +31,11 @@ const Courses = () => {
     showMore || !isMobile ? combinedData : combinedData.slice(0, 3)
 
   return (
-    <section className="mb-8 w-full sm:mb-[51px] md:mb-[62px] md:px-5 xl:mb-[94px] xl:px-10 3xl:mb-[171px] 3xl:px-20 5xl:mb-[211px]">
+    <section className="mb-[31px] w-full sm:mb-[51px] md:mb-[62px] md:px-5 xl:mb-[95px] xl:px-10 3xl:mb-[171px] 3xl:px-20 5xl:mb-[211px]">
       <Title />
       <div>
-        <div className="flex flex-col flex-wrap gap-[20px] md:flex-row md:flex-nowrap">
-          <ul className="flex flex-wrap justify-center gap-[20px]">
+        <div className="flex flex-col flex-wrap gap-[17px] sm:gap-[20px] md:flex-row md:flex-nowrap">
+          <ul className="flex flex-wrap justify-center gap-[17px] sm:gap-[20px]">
             <SaleCards
               data={displayedData.filter((item) => item.type === "sale")}
             />
@@ -46,7 +46,7 @@ const Courses = () => {
           {!showMore && isMobile && (
             <button
               onClick={handleShowMore}
-              className="mx-auto mt-[13.5px] flex items-center gap-3 md:hidden"
+              className="mx-auto mt-[17px] flex h-[48px] items-center justify-center gap-[20px] md:hidden"
             >
               <p className=" text-base font-medium   leading-[1.5px] tracking-[0px]">
                 Показати більше
