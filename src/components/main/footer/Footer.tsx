@@ -43,7 +43,7 @@ const Footer = () => {
             className="cursor-pointer border-b-2 pb-[1px]"
             onClick={() => setShowPartners(true)}
           >
-            Партнери
+            {t("partners")}
           </p>
           <p className="md:w-[125px] 5xl:w-[128px]">MIND LAB</p>
         </div>
