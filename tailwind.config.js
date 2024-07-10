@@ -29,7 +29,7 @@ module.exports = {
         graphite: "hsl(var(--graphite))",
         darkGray: "hsl(var(--darkGray))",
         lightGray: "hsl(var(--lightGray))",
-        white: "hsl(var(--white))",
+        gray: "hsl(var(--gray))",
         green: "hsl(var(--green))",
         blue: "hsl(var(--blue))",
         violet: "hsl(var(--violet))",
@@ -52,6 +52,9 @@ module.exports = {
         "3xl": "1440px",
         "4xl": "1536px",
         "5xl": "1920px"
+      },
+      transitionDuration: {
+        1300: "1300ms"
       }
     }
   },
