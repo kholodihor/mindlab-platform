@@ -1,14 +1,14 @@
-import EmailIcon from "@/components/icon/EmailIcon"
-import FacebookIcon from "@/components/icon/FacebookIcon"
-import InstagramIcon from "@/components/icon/InstagramIcon"
-import TelegramIcon from "@/components/icon/TelegramIcon"
-import BlogIcon from "@/components/icon/BlogIcon"
+import EmailIcon from "@/components/icons/footerIcons/EmailIcon"
+import FacebookIcon from "@/components/icons/footerIcons/FacebookIcon"
+import InstagramIcon from "@/components/icons/footerIcons/InstagramIcon"
+import TelegramIcon from "@/components/icons/footerIcons/TelegramIcon"
+import BlogIcon from "@/components/icons/footerIcons/BlogIcon"
 import { FC } from "react"
-import TelegramBigIcon from "@/components/icon/TelegramBigIcon"
-import InstagramBigIcon from "@/components/icon/InstagramBigColor"
-import FacebookBigIcon from "@/components/icon/FacebookBigIcon"
-import EmailBigIcon from "@/components/icon/EmailBigIcon"
-import BlogBigIcon from "@/components/icon/BlogBigIcon"
+import TelegramBigIcon from "@/components/icons/footerIcons/TelegramBigIcon"
+import InstagramBigIcon from "@/components/icons/footerIcons/InstagramBigColor"
+import FacebookBigIcon from "@/components/icons/footerIcons/FacebookBigIcon"
+import EmailBigIcon from "@/components/icons/footerIcons/EmailBigIcon"
+import BlogBigIcon from "@/components/icons/footerIcons/BlogBigIcon"
 
 type SocialeList = {
   title: string
@@ -53,8 +53,8 @@ export const socialeList: Array<SocialeList> = [
       "bottom-[60%] left-[26%] rotate-[18deg] sm:bottom-[68%] sm:left-[26%] sm:rotate-[-52deg] md:bottom-[16%] md:left-[82%] md:rotate-[-41deg] 2md:left-[84%] 3md:left-[70%] xl:rotate-[-32deg] xl:left-[66%] 3xl:rotate-[-24deg] 3xl:left-[66.5%] 5xl:rotate-[-23deg] 5xl:bottom-[90px] 5xl:left-[1248px]"
   },
   {
-    title: "блог",
-    titleLeptop: "наш блог",
+    title: "blog",
+    titleLeptop: "blogLeptop",
     Component: BlogIcon,
     ComponentMob: BlogBigIcon,
     href: "",
