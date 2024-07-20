@@ -30,10 +30,10 @@ export const Input = ({
   if (!icon)
     return (
       <div className={"flex flex-col gap-3"}>
-        <label className={"text-[16px] text-darkGray"}>{label}</label>
+        <label className={"text-[16px] text-darkGray xs:text-[12px]"}>{label}</label>
         <input
           className={
-            "w-[360px] border-b border-solid border-b-graphite p-[8px_16px] text-[18px] text-lightGray"
+            "w-[360px] border-b border-solid border-b-graphite p-[8px_16px] text-[18px] text-lightGray sm:w-[318px] xs:w-[264px]"
           }
           type={type}
           {...register(name)}
@@ -43,11 +43,11 @@ export const Input = ({
 
   return (
     <div className={"flex flex-col gap-3"}>
-      <label className={"text-[16px] text-darkGray"}>{label}</label>
+      <label className={"text-[16px] text-darkGray xs:text-[12px]"}>{label}</label>
       <div className={"relative "}>
         <input
           className={
-            "w-[360px] border-b border-solid border-b-graphite p-[8px_16px] text-[18px] text-lightGray"
+            "w-[360px] border-b border-solid border-b-graphite p-[8px_16px] text-[18px] text-lightGray sm:w-[318px] xs:w-[264px]"
           }
           type={showPassword ? "text" : type}
           {...register(name)}
