@@ -21,7 +21,7 @@ const Dashboard = () => {
               className="group relative flex h-[160px] flex-wrap content-start justify-center gap-4 overflow-hidden rounded-lg border border-lightGray bg-graphite pt-[34.5px] sm:h-[240px] sm:pt-[64.5px] md:h-[280px] md:px-4 md:pt-10 2md:hover:text-black 3xl:px-10"
             >
               <div
-                className={`duration-1300 absolute bottom-0 left-0 h-4 w-4 scale-0 transform rounded-full transition-transform ease-out 2md:group-hover:scale-[100]`}
+                className={`absolute bottom-0 left-0 h-4 w-4 scale-0 transform rounded-full transition-transform duration-1300 ease-out 2md:group-hover:scale-[100]`}
                 style={{ backgroundColor: colorIcon }}
               ></div>
               <div

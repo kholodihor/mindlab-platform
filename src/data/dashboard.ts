@@ -20,7 +20,7 @@ export const dashboard: Array<Dashboard> = [
     Component: StudyingIcon,
     description:
       "Твій курс: містить відео-уроки, теоретичні матеріали та домашні завдання",
-    href: "/home",
+    href: "/studying",
     colorIcon: "#03AA89"
   },
   {
