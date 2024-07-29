@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom"
-import HeroPage from "./pages/HeroPage"
 import { ModalProvider } from "./context/ModalContext"
+import HeroPage from "./pages/HeroPage"
 import HomePage from "./pages/HomePage"
 import StudentLayout from "./components/main/studentLayout/StudentLayout"
 import CoursesPage from "./pages/CoursesPage"
@@ -9,6 +9,7 @@ import SpeakingClubPage from "./pages/SpeakingClubPage"
 import EventsPage from "./pages/EventsPage"
 import BoardPage from "./pages/BoardPage"
 import SupportPage from "./pages/SupportPage"
+import StudyingPage from "./pages/StudyingPage"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/student/board" element={<BoardPage />} />
           <Route path="/student/support" element={<SupportPage />} />
         </Route>
+        <Route path="/studying" element={<StudyingPage />} />
       </Routes>
     </ModalProvider>
   )
