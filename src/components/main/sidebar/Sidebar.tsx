@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import CoursesIcon from "@/components/icons/dashboard/CourseIcon"
 import CalendarIcon from "@/components/icons/dashboard/CalendarIcon"
 import EnglishIcon from "@/components/icons/dashboard/SpeakingIcon"
