@@ -7,11 +7,11 @@ import ForumIcon from "@/components/icons/dashboard/ForumIcon"
 import SupportIcon from "@/components/icons/dashboard/SupportIcon"
 
 const Sidebar = () => {
-  const pathname = useLocation()
+  /*const pathname = useLocation()
   console.log(pathname.pathname)
   const isLinkActive = (link: string) => {
     return pathname.pathname.split("/").includes(link)
-  }
+  }*/
 
   return (
     <div className="w-full xs:bg-inherit xs:pl-[15px] xs:pr-[15px] xs:pt-[15px] sm:pl-5 sm:pr-5 sm:pt-[30px] md:bg-graphite md:pt-0 xl:max-w-[130px] xl:px-0 xl:pt-10">
