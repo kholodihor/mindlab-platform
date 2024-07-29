@@ -175,3 +175,46 @@ body {
     scrollbar-width: none;
   }
 }
+
+.active {
+  position: relative;
+  border-radius: 8px;
+  color: hsl(230, 11%, 11%) !important;
+  background-color: hsl( 235, 45%, 77%) !important;
+  @media screen and (min-width: 744px) {
+    color: hsl(240, 2%, 92%) !important;
+    background-color: transparent !important;
+  }
+  
+}
+
+.active::after {
+  position: absolute;
+  content: '';
+
+  border-radius: 4px;
+  background-color: hsl(76, 83%, 58%); 
+  visibility: hidden;
+}
+
+@media screen and (min-width: 744px) {
+
+  .active::after {  
+    visibility: visible;
+    width: 100% ;
+    height: 4px ;
+    bottom: 0 ;
+   
+  }
+}
+@media screen and (min-width: 1280px) {
+
+  .active::after {  
+    visibility: visible;
+    width: 4px;
+    height: 100%;
+    right: 0;
+   
+  }
+
+}
