@@ -12,6 +12,7 @@ import { FetchBaseQueryError } from "@reduxjs/toolkit/query"
 import { useDispatch } from "react-redux"
 import { saveToken } from "@/store/features/authSlice.ts"
 import { ButtonLogin } from "@/components/main/login/ButtonLogin.tsx";
+import {useNavigate} from "react-router-dom";
 
 interface User {
   email: string
@@ -42,6 +43,7 @@ export const BlockForm = ({
   const [showPassword, setShowPassword] = useState(false)
   const [login, { isLoading }] = useLoginMutation()
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const togglePasswordVisibility = () => setShowPassword(!showPassword)
 
   const onSubmit = async (user: User): Promise<void> => {
@@ -64,6 +66,7 @@ export const BlockForm = ({
         toast.success("Login success", {
           toastId: customId
         })
+        navigate("/home")
         handleClickModal()
       }
     } catch (error: any) {
@@ -79,7 +82,7 @@ export const BlockForm = ({
         <div>Завантаження...</div>
       ) : (
         <form
-          className={"w-[480px] rounded-[6px] bg-[#FFFFFF] p-[23px_55px]"}
+          className={"w-[480px] rounded-[6px] bg-[#FFFFFF] p-[23px_55px] sm:w-[390px] xs:w-[292px] xs:p-[20px_14px]"}
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className={"mb-10 flex flex-col gap-6 text-left"}>
