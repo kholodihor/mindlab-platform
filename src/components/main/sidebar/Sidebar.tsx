@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom"
+import { useTranslation } from "react-i18next"
 import CoursesIcon from "@/components/icons/dashboard/CourseIcon"
 import CalendarIcon from "@/components/icons/dashboard/CalendarIcon"
 import EnglishIcon from "@/components/icons/dashboard/SpeakingIcon"
@@ -12,9 +13,10 @@ const Sidebar = () => {
   const isLinkActive = (link: string) => {
     return pathname.pathname.split("/").includes(link)
   }*/
+  const { t } = useTranslation("sidebar")
 
   return (
-    <div className="w-full xs:bg-inherit xs:pl-[15px] xs:pr-[15px] xs:pt-[15px] sm:pl-5 sm:pr-5 sm:pt-[30px] md:bg-graphite md:pt-0 xl:max-w-[130px] xl:px-0 xl:pt-10">
+    <div className="w-full xs:mt-14 xs:bg-inherit xs:pl-[15px] xs:pr-[15px] xs:pt-4 sm:pl-5 sm:pr-5 sm:pt-12 md:mt-16 md:bg-graphite md:pt-0 xl:mt-0 xl:max-w-[130px] xl:px-0 xl:pt-[104px]">
       <ul className="flex flex-row items-center xs:gap-2.5 md:gap-0 xl:flex-col xl:gap-[15px]">
         <li className="xs:w-1/6 xl:w-full">
           <NavLink
@@ -23,7 +25,7 @@ const Sidebar = () => {
           >
             <CoursesIcon width={24} />
             <span className="text-base text-inherit xs:hidden md:block">
-              Мої курси
+              {t("courses")}
             </span>
           </NavLink>
         </li>
@@ -34,7 +36,7 @@ const Sidebar = () => {
           >
             <CalendarIcon width={24} />
             <span className="text-base text-inherit xs:hidden md:block">
-              Календар
+              {t("schedule")}
             </span>
           </NavLink>
         </li>
@@ -56,7 +58,7 @@ const Sidebar = () => {
           >
             <EventIcon width={24} />
             <span className="text-base text-inherit xs:hidden md:block">
-              Події
+              {t("events")}
             </span>
           </NavLink>
         </li>
@@ -67,7 +69,7 @@ const Sidebar = () => {
           >
             <ForumIcon width={24} />
             <span className="text-base text-inherit xs:hidden md:block">
-              Форум
+              {t("forum")}
             </span>
           </NavLink>
         </li>
@@ -78,7 +80,7 @@ const Sidebar = () => {
           >
             <SupportIcon width={24} />
             <span className="text-base text-inherit xs:hidden md:block">
-              Підтримка
+              {t("support")}
             </span>
           </NavLink>
         </li>

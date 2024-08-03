@@ -1,5 +1,12 @@
+import PageHeader from "@/components/shared/PageHeader"
+
 const SpeakingClubPage = () => {
-  return <div>speaking club</div>
+  return (
+    <div>
+      <PageHeader title="Speaking Club" />
+      speaking club
+    </div>
+  )
 }
 
 export default SpeakingClubPage
