@@ -13,6 +13,20 @@
     "support": "Support",
     "website": "Website"
   },
+  "studentMobileMenu": {
+    "sertificates": "Sertificates",
+    "changePassword": "Change Password",
+    "support": "Support",
+    "reference": "Reference",
+    "exit": "Log out"
+  },
+  "sidebar": {
+    "courses": "My courses",
+    "schedule": "Schedule",
+    "events": "Events",
+    "forum": "Forum",
+    "support": "Support"
+  },
   "Footer": {
     "runningLight": "our contacts",
     "support": "support:",
