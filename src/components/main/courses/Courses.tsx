@@ -7,8 +7,10 @@ import Cards from "./Cards"
 import Open from "@/components/icons/Open"
 import { CardSale } from "@/types/courses"
 import { CardData } from "../../../types/courses/index"
+import { useTranslation } from "react-i18next"
 
 const Courses = () => {
+  const { t } = useTranslation("Main")
   const [showMore, setShowMore] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
 
@@ -61,7 +63,7 @@ const Courses = () => {
               className="mx-auto mt-[17px] flex h-[48px] items-center justify-center gap-[20px] md:hidden"
             >
               <p className=" text-base font-medium   leading-[1.5px] tracking-[0px]">
-                Показати більше
+                {t("courses_section.buttonOpen")}
               </p>
               <Open className={`h-[24px] w-[24px] fill-none stroke-white`} />
             </button>

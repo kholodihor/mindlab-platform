@@ -3,7 +3,7 @@
   "Main": {
     "courses_section": {
       "title": "Наші курси",
-      "sale": "Безкоштовно"
+      "buttonOpen": "Показати більше"
     }
   },
   "mobileMenu": {
@@ -29,11 +29,11 @@
     "support": "Підтримка"
   },
   "Footer": {
-"runningLight": "наші контакти",
-"support": "підтримка:",
-"copyright": "Усі права захищено",
-"partners": "Партнери",
- "blog": "блог",
-     "blogLeptop": "наш блог"
+    "runningLight": "наші контакти",
+    "support": "підтримка:",
+    "copyright": "Усі права захищено",
+    "partners": "Партнери",
+    "blog": "блог",
+    "blogLeptop": "наш блог"
   }
 }
