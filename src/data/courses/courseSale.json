@@ -1,12 +1,16 @@
 [
   {
     "id": "_id-1",
-    "title": "Career guidance ",
-    "items": "Ознайомся з популярними професіями",
+    "accept": { "en": "Free", "ua": "Безкоштовно" },
+    "title": "Career guidance",
+    "items": {
+      "en": "Explore popular professions",
+      "ua": "Ознайомся з популярними професіями"
+    },
     "info": [
-      { "id": "in1", "title": "8 напрямів" },
-      { "id": "in2", "title": "8 лекцій" },
-      { "id": "in3", "title": "8 спікерів" }
+      { "id": "in1", "title": { "en": "8 directions", "ua": "8 напрямів" } },
+      { "id": "in2", "title": { "en": "8 lectures", "ua": "8 лекцій" } },
+      { "id": "in3", "title": { "en": "8 speakers", "ua": "8 спікерів" } }
     ],
     "img_url": "/images/courses/lap.png",
     "gradient": {
