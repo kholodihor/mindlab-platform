@@ -11,9 +11,11 @@
     --foreground: 240, 2%, 92%;
     --lime: 76, 83%, 58%;
     --black: 230, 11%, 11%;
+    --black-second: 240, 5%, 4%;
     --graphite: 223, 10%, 14%;
     --darkGray: 224, 9%, 23%;
     --lightGray: 224, 5%, 45%;
+    --grayText: 224, 5%, 52%;
     --white: 240, 2%, 92%;
     --green: 168, 97%, 34%;
     --blue: 240, 83%, 58%;
@@ -27,6 +29,7 @@
     --bg-color-modal: rgba(170, 174, 223, 1);
     --overlay-modal: rgba(0, 0, 0, 0.8);
     --error: #da3c3c;
+    --grayPlaceholder: 	224, 8%, 72%;
     --z-index-modal: 100;
   }
 }
@@ -172,4 +175,47 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+}
+
+.active {
+  position: relative;
+  border-radius: 8px;
+  color: hsl(230, 11%, 11%) !important;
+  background-color: hsl( 235, 45%, 77%) !important;
+  @media screen and (min-width: 744px) {
+    color: hsl(240, 2%, 92%) !important;
+    background-color: transparent !important;
+  }
+  
+}
+
+.active::after {
+  position: absolute;
+  content: '';
+
+  border-radius: 4px;
+  background-color: hsl(76, 83%, 58%); 
+  visibility: hidden;
+}
+
+@media screen and (min-width: 744px) {
+
+  .active::after {  
+    visibility: visible;
+    width: 100% ;
+    height: 4px ;
+    bottom: 0 ;
+   
+  }
+}
+@media screen and (min-width: 1280px) {
+
+  .active::after {  
+    visibility: visible;
+    width: 4px;
+    height: 100%;
+    right: 0;
+   
+  }
+
 }
