@@ -2,8 +2,8 @@
   {
     "id": "id-1",
     "title": "Political science-sociology",
-    "time": "3 місяці",
-    "lesson": "8 занять ",
+    "time": { "en": "3 months", "ua": "3 місяці" },
+    "lesson": { "en": "8 lessons", "ua": "8 занять" },
     "skills": [
       { "id": "in1", "title": "#UI/UX Design" },
       { "id": "in2", "title": "#FE/BE" },
@@ -16,12 +16,11 @@
     },
     "hover": "#03AA89"
   },
-
   {
     "id": "id-4",
     "title": "Leadership",
-    "time": "3 місяці",
-    "lesson": "8 занять ",
+    "time": { "en": "3 months", "ua": "3 місяці" },
+    "lesson": { "en": "8 lessons", "ua": "8 занять" },
     "skills": [
       { "id": "in1", "title": "#UI/UX Design" },
       { "id": "in2", "title": "#FE/BE" },
@@ -37,8 +36,8 @@
   {
     "id": "id-2",
     "title": "Business",
-    "time": "3 місяці",
-    "lesson": "8 занять ",
+    "time": { "en": "3 months", "ua": "3 місяці" },
+    "lesson": { "en": "8 lessons", "ua": "8 занять" },
     "skills": [
       { "id": "in1", "title": "#UI/UX Design" },
       { "id": "in2", "title": "#FE/BE" },
@@ -54,8 +53,8 @@
   {
     "id": "id-3",
     "title": "Art",
-    "time": "3 місяці",
-    "lesson": "8 занять ",
+    "time": { "en": "3 months", "ua": "3 місяці" },
+    "lesson": { "en": "8 lessons", "ua": "8 занять" },
     "skills": [
       { "id": "in1", "title": "#UI/UX Design" },
       { "id": "in2", "title": "#FE/BE" },
@@ -71,8 +70,8 @@
   {
     "id": "id-5",
     "title": "Innovative technologies",
-    "time": "3 місяці",
-    "lesson": "8 занять ",
+    "time": { "en": "3 months", "ua": "3 місяці" },
+    "lesson": { "en": "8 lessons", "ua": "8 занять" },
     "skills": [
       { "id": "in1", "title": "#UI/UX Design" },
       { "id": "in2", "title": "#FE/BE" },

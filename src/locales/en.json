@@ -3,7 +3,7 @@
   "Main": {
     "courses_section": {
       "title": "Our courses",
-      "sale": "Free"
+      "buttonOpen": "Show more"
     }
   },
   "mobileMenu": {
@@ -31,8 +31,8 @@
     "runningLight": "our contacts",
     "support": "support:",
     "copyright": "All rights reserved",
-     "partners": "Partners",
-     "blog": "blog",
-     "blogLeptop": "Our blog"
-      }
+    "partners": "Partners",
+    "blog": "blog",
+    "blogLeptop": "Our blog"
+  }
 }
