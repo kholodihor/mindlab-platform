@@ -22,7 +22,7 @@ const Cards = ({ data }: { data: CardData[] }) => {
     <>
       <style>
         {`
-          .active {
+          .active-cards {
             transition:  bottom 0.9s ease-in-out, left 0.9s ease-in-out;}
             .overlay{
             transition: opacity 1s ease-in-out;}
