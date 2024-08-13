@@ -21,6 +21,8 @@ const SaleCards = ({ data }: { data: CardSale[] }) => {
     <>
       <style>
         {`
+         .active-cards {
+            transition:  bottom 0.9s ease-in-out, left 0.9s ease-in-out;}
     .overlay {
       transition: opacity 1s ease-in-out;
     }
@@ -39,7 +41,7 @@ const SaleCards = ({ data }: { data: CardSale[] }) => {
             }}
           >
             <span
-              className={`-z-1  absolute  h-[65rem] w-[45rem] transform rounded-full transition-all duration-1000  ${hoveredCard === item.id ? "-bottom-[35rem] -left-[18rem]" : "-bottom-[65rem] -left-[55rem] opacity-0 transition-opacity"}`}
+              className={`active-cards  -z-1  absolute  h-[55rem] w-[45rem]  transform rounded-full   ${hoveredCard === item.id ? "-bottom-[30rem] -left-[15rem]" : "-bottom-[55rem] -left-[45rem] opacity-0 transition-opacity"}`}
               style={{ backgroundColor: item.hover }}
             ></span>
             <div
