@@ -3,8 +3,9 @@ import React, { HTMLProps } from "react"
 interface SmileOProps extends HTMLProps<HTMLDivElement> {}
 const SmileO: React.FC<SmileOProps> = ({ className, ...rest }) => {
   return (
-    <div {...rest} className={`${className}`}>
+    <div {...rest} className="inline-block">
       <svg
+        className={`${className}`}
         width="32"
         height="32"
         viewBox="0 0 32 32"
