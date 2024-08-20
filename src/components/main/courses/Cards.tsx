@@ -34,7 +34,7 @@ const Cards = ({ data }: { data: CardData[] }) => {
             onMouseEnter={() => handleMouseEnter(item.id)}
             onMouseLeave={handleMouseLeave}
             key={item.id}
-            className={`relative z-10 h-[170px] w-[292px] cursor-pointer overflow-hidden px-4 py-[18px] sm:h-[228px] sm:w-[390px] sm:px-[22px] sm:py-6 md:h-[200px] md:w-[342px] md:px-[20px] md:py-[22px] xl:h-[226px] xl:w-[387px] xl:px-[22px] 3xl:h-[242px] 3xl:w-[413px] 3xl:py-4 3xl:py-6 5xl:h-[335px] 5xl:w-[573px]`}
+            className={`relative z-10 h-[170px] w-[292px] cursor-pointer overflow-hidden rounded-md px-4 py-[18px] sm:h-[228px] sm:w-[390px] sm:px-[22px] sm:py-6 md:h-[200px] md:w-[342px] md:px-[20px] md:py-[22px] xl:h-[226px] xl:w-[387px] xl:px-[22px] 3xl:h-[242px] 3xl:w-[413px] 3xl:py-4 3xl:py-6 5xl:h-[335px] 5xl:w-[573px]`}
             style={{
               background: `radial-gradient(circle at ${
                 index % 2 === 0 ? "left bottom" : "left top"
@@ -42,11 +42,11 @@ const Cards = ({ data }: { data: CardData[] }) => {
             }}
           >
             <span
-              className={`active -z-1 absolute h-[55rem] w-[45rem] transform rounded-full transition-all ${hoveredCard === item.id ? "-bottom-[30rem] -left-[15rem]" : "-bottom-[55rem] -left-[45rem] opacity-0 transition-opacity"}`}
+              className={`active-cards -z-1 absolute h-[55rem] w-[45rem] transform rounded-full  ${hoveredCard === item.id ? "-bottom-[30rem] -left-[15rem]" : "-bottom-[55rem] -left-[45rem] opacity-0 transition-opacity"}`}
               style={{ backgroundColor: item.hover }}
             ></span>
             <div
-              className={`overlay -z-1 absolute left-0 top-0 h-full w-full rounded-lg`}
+              className={`overlay -z-1 absolute left-0 top-0 h-full w-full rounded-md`}
               style={{
                 backgroundColor: item.gradient.color1,
                 opacity: hoveredCard === item.id ? 1 : 0

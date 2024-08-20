@@ -21,29 +21,31 @@ const SaleCards = ({ data }: { data: CardSale[] }) => {
     <>
       <style>
         {`
-          .active {
+         .active-cards {
             transition:  bottom 0.9s ease-in-out, left 0.9s ease-in-out;}
-            .overlay{
-            transition: opacity 1s ease-in-out;}
-        `}
+    .overlay {
+      transition: opacity 1s ease-in-out;
+    }
+  `}
       </style>
+
       {data?.map((item) => {
         return (
           <li
             onMouseEnter={() => handleMouseEnter(item.id)}
             onMouseLeave={handleMouseLeave}
             key={item.id}
-            className={`relative z-10 h-[170px] w-[292px] cursor-pointer overflow-hidden bg-[#202227] px-4 py-[18px] sm:h-[228px] sm:w-[390px] sm:px-[22px] sm:py-[24px] md:h-[200px] md:w-[342px] md:px-[20px] md:py-[22px] xl:h-[226px] xl:w-[387px] xl:px-[22px] 3xl:h-[242px] 3xl:w-[413px] 3xl:py-4 3xl:py-6 5xl:h-[335px] 5xl:w-[573px]`}
+            className={`relative z-10 h-[170px] w-[292px] cursor-pointer overflow-hidden rounded-md bg-[#202227] px-4 py-[18px] sm:h-[228px] sm:w-[390px] sm:px-[22px] sm:py-[24px] md:h-[200px] md:w-[342px] md:px-[20px] md:py-[22px] xl:h-[226px] xl:w-[387px] xl:px-[22px] 3xl:h-[242px] 3xl:w-[413px] 3xl:py-4 3xl:py-6 5xl:h-[335px] 5xl:w-[573px]`}
             style={{
               background: `radial-gradient(circle at left bottom, ${item.gradient.color1}, ${item.gradient.color2})`
             }}
           >
             <span
-              className={`active -z-1 absolute h-[55rem] w-[45rem] transform rounded-full transition-all ${hoveredCard === item.id ? "-bottom-[30rem] -left-[15rem]" : "-bottom-[55rem] -left-[45rem] opacity-0 transition-opacity"}`}
+              className={`active-cards  -z-1  absolute  h-[55rem] w-[45rem]  transform rounded-full   ${hoveredCard === item.id ? "-bottom-[30rem] -left-[15rem]" : "-bottom-[55rem] -left-[45rem] opacity-0 transition-opacity"}`}
               style={{ backgroundColor: item.hover }}
             ></span>
             <div
-              className={`overlay -z-1 absolute left-0 top-0 h-full w-full rounded-lg`}
+              className={`overlay -z-1 absolute left-0 top-0 h-full w-full rounded-md`}
               style={{
                 backgroundColor: `${item.gradient.color1}`,
                 opacity: hoveredCard === item.id ? 1 : 0
