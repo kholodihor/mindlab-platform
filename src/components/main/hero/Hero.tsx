@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="md:pt-15 5xl:pt-22 mb-20 w-full  px-3.5 pt-8 tracking-normal sm:mb-[100px] sm:px-5 sm:pt-9 xl:mb-[152px] xl:px-10 xl:pt-20 3xl:mb-[172px] 3xl:px-20 5xl:mb-[238px] 5xl:px-20 5xl:px-20 ">
       <div className="mb-12 text-left font-['Fixel_Display',_sans-serif] text-[40px] font-semibold uppercase leading-[1]  text-white  sm:mb-20 sm:text-[55px] md:text-[58px] xl:mb-[72px] xl:text-[100px] 3xl:text-[108px] 5xl:text-[150px]">
-        <div className="flex  items-center gap-1 xl:gap-[10px] 3xl:gap-[5px]">
+        <div className="flex  items-center md:gap-1 xl:gap-[10px] 3xl:gap-[5px]">
           <Star className="hidden h-[41px] w-[30px] fill-[#AAAEDF] stroke-black md:block xl:h-[41px] xl:w-[41px] 3xl:h-[41px] 3xl:w-[41px]" />
           <p>
             платф
