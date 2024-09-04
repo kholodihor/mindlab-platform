@@ -1,6 +1,16 @@
 {
   "hello": "привіт",
   "Main": {
+    "hero": {
+      "hero_item1": "платф",
+      "hero_item2": "рма",
+      "hero_item3": "твого",
+      "hero_item4": "безмежного",
+      "hero_item5": "р",
+      "hero_item6": "звитку",
+      "title": "Платформа Mind Lab",
+      "subTitle": "Освітня платформа підготувала для тебе цікаві курси за різними напрямками. <br /><br /> Ти можеш познайомитись із найпопулярнішими професіями в нашому <span class=\"md:font-medium md:text-[#eaeaeb]\"> безкоштовному курсі</span> Career guidance."
+    },
     "courses_section": {
       "title": "Наші курси",
       "buttonOpen": "Показати більше"

@@ -1,6 +1,16 @@
 {
   "hello": "hello",
   "Main": {
+    "hero": {
+      "hero_item1": "platf",
+      "hero_item2": "rm",
+      "hero_item3": "for your",
+      "hero_item4": "unlimited",
+      "hero_item5": "devel",
+      "hero_item6": "pment",
+      "title": "Platform Mind Lab",
+      "subTitle": "The educational platform has prepared interesting courses for you in various directions. <br /><br /> You can get acquainted with the most popular professions in our <span class=\"md:font-medium md:text-[#eaeaeb]\"> free course</span> Career guidance."
+    },
     "courses_section": {
       "title": "Our courses",
       "buttonOpen": "Show more"
