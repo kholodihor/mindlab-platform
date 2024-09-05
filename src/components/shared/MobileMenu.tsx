@@ -55,7 +55,7 @@ const MobileMenu = ({ openMobileMenu, setOpenMobileMenu }: MobileMenuProps) => {
               to="/student/support"
               className="flex items-center gap-4 text-base text-white"
             >
-              <ReferenceIcon />
+              <ReferenceIcon width={30} />
               <span>{t("support")}</span>
             </Link>
           </li>
