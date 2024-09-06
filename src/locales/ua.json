@@ -38,6 +38,10 @@
     "forum": "Форум",
     "support": "Підтримка"
   },
+  "pageHeader": {
+    "studying": "Навчання",
+    "support": "Підтримка"
+  },
   "Footer": {
     "runningLight": "наші контакти",
     "support": "підтримка:",

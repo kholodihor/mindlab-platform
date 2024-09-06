@@ -1,8 +1,12 @@
-const ReferenceIcon = () => {
+type Props = {
+  width?: number
+}
+
+const ReferenceIcon = ({ width }: Props) => {
   return (
     <svg
-      width="30"
-      height="30"
+      width={width}
+      height={width}
       viewBox="0 0 30 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -37,6 +37,10 @@
     "forum": "Forum",
     "support": "Support"
   },
+  "pageHeader": {
+    "studying": "Education",
+    "support": "Support"
+  },
   "Footer": {
     "runningLight": "our contacts",
     "support": "support:",
