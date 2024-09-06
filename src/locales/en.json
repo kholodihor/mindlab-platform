@@ -9,7 +9,8 @@
       "hero_item5": "devel",
       "hero_item6": "pment",
       "title": "Platform Mind Lab",
-      "subTitle": "The educational platform has prepared interesting courses for you in various directions. <br /><br /> You can get acquainted with the most popular professions in our <span class=\"md:font-medium md:text-[#eaeaeb]\"> free course</span> Career guidance."
+      "subTitle": "The educational platform has prepared interesting courses for you in various directions. <br /><br /> You can get acquainted with the most popular professions in our <span class=\"md:font-medium md:text-[#eaeaeb]\"> free course</span> Career guidance.",
+      "button": "To study"
     },
     "courses_section": {
       "title": "Our courses",
