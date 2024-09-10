@@ -9,7 +9,10 @@ const Hero = () => {
   const { t } = useTranslation("Main")
   return (
     <section className="md:pt-15 5xl:pt-22 mb-20 w-full  px-3.5 pt-8 tracking-normal sm:mb-[100px] sm:px-5 sm:pt-9 xl:mb-[152px] xl:px-10 xl:pt-20 3xl:mb-[172px] 3xl:px-20 5xl:mb-[238px] 5xl:px-20 5xl:px-20 ">
-      <div className="mb-12 text-left font-['Fixel_Display',_sans-serif] text-[40px] font-semibold uppercase leading-[1]  text-white  sm:mb-20 sm:text-[55px] md:text-[58px] xl:mb-[72px] xl:text-[100px] 3xl:text-[108px] 5xl:text-[150px]">
+      <div
+        className={`mb-12 text-left font-['Fixel_Display',_sans-serif]  font-semibold uppercase leading-[1]  text-white  sm:mb-20 sm:text-[55px] md:text-[58px] xl:mb-[72px] xl:text-[100px] 3xl:text-[108px] 5xl:text-[150px] 
+        ${i18next.language === "ua" ? "text-[40px] sm:text-[55px]" : "text-[36px] sm:text-[50px]"}`}
+      >
         <div className="flex  items-center md:gap-1 xl:gap-[10px] 3xl:gap-[5px]">
           <Star className="hidden h-[41px] w-[30px] fill-[#AAAEDF] stroke-black md:block xl:h-[41px] xl:w-[41px] 3xl:h-[41px] 3xl:w-[41px]" />
           <p>
@@ -22,7 +25,7 @@ const Hero = () => {
           className={`text-lightViolet ${
             i18next.language === "ua"
               ? "md:ml-[35px] xl:ml-[51px] 3xl:ml-[49px]"
-              : "md:ml-[33px] xl:ml-[50px] 3xl:ml-[45px]"
+              : "md:ml-[27px] xl:ml-[41px] 3xl:ml-[33px]"
           }`}
         >
           {" "}
@@ -33,7 +36,7 @@ const Hero = () => {
           className={`text-lightViolet ${
             i18next.language === "ua"
               ? "md:ml-[249px] xl:ml-[420px] 3xl:ml-[448px] 5xl:ml-[604px]"
-              : "md:ml-[176px] xl:ml-[295px] 3xl:ml-[312px] 5xl:ml-[416px]"
+              : "md:ml-[171px] xl:ml-[299px] 3xl:ml-[309px] 5xl:ml-[426px]"
           }`}
         >
           {t("hero.hero_item5")}
@@ -44,7 +47,7 @@ const Hero = () => {
       <div className="font-normal xl:flex xl:items-end xl:justify-end xl:gap-12 3xl:gap-[108px] 5xl:gap-[167px]">
         {" "}
         <div className="gap-[140px] md:mb-5 md:flex xl:mb-0 xl:gap-5 5xl:gap-[83px]">
-          <p className=" mb-4 max-w-[100px] text-left text-sm  text-lightGray sm:mb-6 sm:text-base xl:mb-0 xl:max-w-full  5xl:text-[20px]">
+          <p className=" mb-4 max-w-[90px] text-left text-sm  text-lightGray sm:mb-6 sm:text-base xl:mb-0 xl:max-w-full  5xl:text-[20px]">
             {t("hero.title")}
           </p>
           <p className="mb-8 text-base md:mb-0 md:max-w-[437px] md:text-[#b3b6be] 5xl:min-w-[584px] 5xl:text-[20px]">
