@@ -9,7 +9,7 @@ type ProgressProps = {
 const Progress = ({ progress, completed }: ProgressProps) => {
   const [showProgress, setShowProgress] = useState(false)
   return (
-    <div className="mb-6 px-5 sm:mb-8">
+    <div className="mb-6  px-[14px] sm:mb-8">
       <div className="relative mb-4 flex items-center justify-between  pb-4 ">
         <h2 className="text-violet sm:text-lg">Мій прогрес: {progress}%</h2>
         <button
@@ -26,7 +26,7 @@ const Progress = ({ progress, completed }: ProgressProps) => {
         <span className="absolute -bottom-[3px] block h-[3px] w-[100%] rounded-3xl bg-lightGray"></span>
       </div>
       {showProgress && (
-        <div className="mb-4 sm:text-base">
+        <div className="mb-4  rounded-md bg-blackSecond p-6 sm:text-base">
           <p className="mb-4 ">
             <span className="text-lightGray">Пройдено:</span> 5 уроків
           </p>
