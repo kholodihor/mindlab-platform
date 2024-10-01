@@ -1,9 +1,20 @@
 {
   "hello": "hello",
   "Main": {
+    "hero": {
+      "hero_item1": "platf",
+      "hero_item2": "rm",
+      "hero_item3": "of your",
+      "hero_item4": "unlimited",
+      "hero_item5": "devel",
+      "hero_item6": "pment",
+      "title": "Platform Mind Lab",
+      "subTitle": "The educational platform has prepared interesting courses for you in various directions. <br /><br /> You can get acquainted with the most popular professions in our <span class=\"md:font-medium md:text-[#eaeaeb]\"> free course</span> Career guidance.",
+      "button": "To study"
+    },
     "courses_section": {
       "title": "Our courses",
-      "sale": "Free"
+      "buttonOpen": "Show more"
     }
   },
   "mobileMenu": {
@@ -13,12 +24,30 @@
     "support": "Support",
     "website": "Website"
   },
+  "studentMobileMenu": {
+    "sertificates": "Sertificates",
+    "changePassword": "Change Password",
+    "support": "Support",
+    "reference": "Reference",
+    "exit": "Log out"
+  },
+  "sidebar": {
+    "courses": "My courses",
+    "schedule": "Schedule",
+    "events": "Events",
+    "forum": "Forum",
+    "support": "Support"
+  },
+  "pageHeader": {
+    "studying": "Education",
+    "support": "Support"
+  },
   "Footer": {
     "runningLight": "our contacts",
     "support": "support:",
     "copyright": "All rights reserved",
-     "partners": "Partners",
-     "blog": "blog",
-     "blogLeptop": "Our blog"
-      }
+    "partners": "Partners",
+    "blog": "blog",
+    "blogLeptop": "Our blog"
+  }
 }

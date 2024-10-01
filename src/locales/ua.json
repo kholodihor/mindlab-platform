@@ -1,9 +1,20 @@
 {
   "hello": "привіт",
   "Main": {
+    "hero": {
+      "hero_item1": "платф",
+      "hero_item2": "рма",
+      "hero_item3": "твого",
+      "hero_item4": "безмежного",
+      "hero_item5": "р",
+      "hero_item6": "звитку",
+      "title": "Платформа Mind Lab",
+      "subTitle": "Освітня платформа підготувала для тебе цікаві курси за різними напрямками. <br /><br /> Ти можеш познайомитись із найпопулярнішими професіями в нашому <span class=\"md:font-medium md:text-[#eaeaeb]\"> безкоштовному курсі</span> Career guidance.",
+      "button": "До навчання"
+    },
     "courses_section": {
       "title": "Наші курси",
-      "sale": "Безкоштовно"
+      "buttonOpen": "Показати більше"
     }
   },
   "mobileMenu": {
@@ -13,12 +24,31 @@
     "support": "Підтримка",
     "website": "Веб сайт"
   },
+  "studentMobileMenu": {
+    "sertificates": "Сертифікати",
+    "changePassword": "Зміна паролю",
+    "support": "Підтримка",
+    "reference": "Довідка",
+    "exit": "Вийти з LMS"
+  },
+  "sidebar": {
+    "courses": "Мої курси",
+    "schedule": "Календар",
+    "englishClub": "English",
+    "events": "Події",
+    "forum": "Форум",
+    "support": "Підтримка"
+  },
+  "pageHeader": {
+    "studying": "Навчання",
+    "support": "Підтримка"
+  },
   "Footer": {
-"runningLight": "наші контакти",
-"support": "підтримка:",
-"copyright": "Усі права захищено",
-"partners": "Партнери",
- "blog": "блог",
-     "blogLeptop": "наш блог"
+    "runningLight": "наші контакти",
+    "support": "підтримка:",
+    "copyright": "Усі права захищено",
+    "partners": "Партнери",
+    "blog": "блог",
+    "blogLeptop": "наш блог"
   }
 }
