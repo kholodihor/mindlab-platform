@@ -1,7 +1,7 @@
-import { dashboard } from "@/data/dashboard"
-import { getWidthIcon } from "@/halpers/getWidthIcons"
-import { useWidth } from "@/hooks/useWidth"
 import { useState } from "react"
+import { dashboard } from "@/data/dashboard"
+import { getWidthOfIcon } from "@/helpers/getWidthOfIcon"
+import { useWidth } from "@/hooks/useWidth"
 
 const Dashboard = () => {
   const currentWidth = useWidth()
@@ -21,7 +21,7 @@ const Dashboard = () => {
               className="group relative flex h-[160px] flex-wrap content-start justify-center gap-4 overflow-hidden rounded-lg border border-lightGray bg-graphite pt-[34.5px] sm:h-[240px] sm:pt-[64.5px] md:h-[280px] md:px-4 md:pt-10 2md:hover:text-black 3xl:px-10"
             >
               <div
-                className={`duration-1300 absolute bottom-0 left-0 h-4 w-4 scale-0 transform rounded-full transition-transform ease-out 2md:group-hover:scale-[100]`}
+                className={`absolute bottom-0 left-0 h-4 w-4 scale-0 transform rounded-full transition-transform duration-1300 ease-out 2md:group-hover:scale-[100]`}
                 style={{ backgroundColor: colorIcon }}
               ></div>
               <div
@@ -30,7 +30,7 @@ const Dashboard = () => {
                   color: isHovered === colorIcon ? "#191A1F" : colorIcon
                 }}
               >
-                <Component width={getWidthIcon(currentWidth)} />
+                <Component width={getWidthOfIcon(currentWidth)} />
               </div>
               <h2 className="relative z-10 w-[75%] text-center text-lg sm:w-[86%] sm:text-2xl sm:font-medium 4xl:text-[28px]">
                 {title}
