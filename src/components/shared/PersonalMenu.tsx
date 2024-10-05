@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
-import SertificateIcon from "../icons/Sertificate"
 import ChangePasswordIcon from "../icons/ChangePassword"
 import LogoutIcon from "../icons/Logout"
+import CertificateIcon from "../icons/Certificate"
 
 type PersonalMenuProps = {
   openPersonalMenu: boolean
@@ -22,16 +22,16 @@ const PersonalMenu = ({ openPersonalMenu }: PersonalMenuProps) => {
       <div className="mb-20 flex flex-col">
         <div>
           <Link
-            to="/student/sertificate"
+            to="/student/certificate"
             className="flex items-center gap-2.5 border-b border-solid border-b-lightGray px-0 py-[16.5px] text-lg text-[white]"
           >
-            <SertificateIcon />
-            <span>{t("sertificates")}</span>
+            <CertificateIcon />
+            <span>{t("certificates")}</span>
           </Link>
         </div>
         <div>
           <Link
-            to="/student/sertificate"
+            to="/student/certificate"
             className="flex items-center gap-2.5 border-b border-solid border-b-lightGray px-0 py-[16.5px] text-lg text-[white]"
           >
             <ChangePasswordIcon />

@@ -1,4 +1,4 @@
-const SertificateIcon = () => {
+const CertificateIcon = () => {
   return (
     <svg
       width="30"
@@ -15,4 +15,4 @@ const SertificateIcon = () => {
   )
 }
 
-export default SertificateIcon
+export default CertificateIcon

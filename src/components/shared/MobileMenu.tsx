@@ -3,11 +3,11 @@ import { useTranslation } from "react-i18next"
 import { Dispatch, SetStateAction } from "react"
 import LanguageSwitcher from "../main/header/LanguageSwitcher"
 import ReferenceIcon from "../icons/Reference"
-import SertificateIcon from "../icons/Sertificate"
 import ChangePasswordIcon from "../icons/ChangePassword"
 import CloseIcon from "../icons/CloseIcon"
 import LogoutIcon from "../icons/Logout"
 import SupportIcon from "../icons/dashboard/SupportIcon"
+import CertificateIcon from "../icons/Certificate"
 
 type MobileMenuProps = {
   openMobileMenu: boolean
@@ -34,16 +34,16 @@ const MobileMenu = ({ openMobileMenu, setOpenMobileMenu }: MobileMenuProps) => {
           </li>
           <li>
             <Link
-              to="/student/sertificate"
+              to="/student/certificate"
               className="flex items-center gap-4 text-base text-white"
             >
-              <SertificateIcon />
-              <span>{t("sertificates")}</span>
+              <CertificateIcon />
+              <span>{t("certificates")}</span>
             </Link>
           </li>
           <li>
             <Link
-              to="/student/sertificate"
+              to="/student/certificate"
               className="flex items-center gap-4 text-base text-white"
             >
               <ChangePasswordIcon />
