@@ -18,7 +18,7 @@ const PageHeader = ({ title }: PageHeaderProps) => {
   const [openPersonalMenu, setOpenPersonalMenu] = useState(false)
 
   return (
-    <div className="fixed right-0 top-0 z-[9999] w-full">
+    <div className="fixed right-0 top-0 z-[99] w-full">
       <div className="flex w-full items-center justify-between border-b border-solid border-b-lightGray bg-graphite xs:px-[15px] xs:py-[13px] sm:px-5 md:h-[64px] md:px-5 md:py-2.5 xl:px-10">
         <div className="flex items-center xs:gap-4 md:gap-[50px] xl:gap-20">
           <div className="pointer">

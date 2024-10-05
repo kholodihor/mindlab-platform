@@ -20,7 +20,7 @@ export const dashboard: Array<Dashboard> = [
     Component: StudyingIcon,
     description:
       "Твій курс: містить відео-уроки, теоретичні матеріали та домашні завдання",
-    href: "/studying",
+    href: "/student/studying",
     colorIcon: "#03AA89"
   },
   {
@@ -28,14 +28,14 @@ export const dashboard: Array<Dashboard> = [
     Component: CalendarIcon,
     description:
       "В календарі відображатимуться важливі події, зустрічі в Speaking club",
-    href: "/home",
+    href: "/student/schedule",
     colorIcon: "#8D83FF"
   },
   {
     title: "Speaking club",
     Component: SpeakingIcon,
     description: "Анонси, теми, спілкування та сповіщення Speaking club",
-    href: "/home",
+    href: "/student/speaking",
     colorIcon: "#FFCCB6"
   },
   {
@@ -43,14 +43,14 @@ export const dashboard: Array<Dashboard> = [
     Component: ForumIcon,
     description:
       "Спільний чат усіх студентів платформи, вчителів та організаторів",
-    href: "/home",
+    href: "/student/events",
     colorIcon: "#FFE732"
   },
   {
     title: "Події",
     Component: EventIcon,
     description: "Анонс майбутніх подій, цікаві статті, архів новин та подій",
-    href: "/home",
+    href: "/student/board",
     colorIcon: "#FF737B"
   },
   {
@@ -58,7 +58,7 @@ export const dashboard: Array<Dashboard> = [
     Component: CourseiconIcon,
     description:
       "Сторінка, де можна побачити всі курси, що пропонує для вивчення платформа MindLab",
-    href: "/home",
+    href: "/student/support",
     colorIcon: "#AAAEDF"
   }
 ]
