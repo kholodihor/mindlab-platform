@@ -1,8 +1,8 @@
-import { dashboard } from "@/data/dashboard"
-import { getWidthIcon } from "@/halpers/getWidthIcons"
-import { useWidth } from "@/hooks/useWidth"
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
+import { dashboard } from "@/data/dashboard"
+import { getWidthOfIcon } from "@/helpers/getWidthOfIcon"
+import { useWidth } from "@/hooks/useWidth"
 
 const Dashboard = () => {
   const currentWidth = useWidth()
@@ -31,7 +31,7 @@ const Dashboard = () => {
                   color: isHovered === colorIcon ? "#191A1F" : colorIcon
                 }}
               >
-                <Component width={getWidthIcon(currentWidth)} />
+                <Component width={getWidthOfIcon(currentWidth)} />
               </div>
               <h2 className="relative z-10 w-[75%] text-center text-lg sm:w-[86%] sm:text-2xl sm:font-medium 4xl:text-[28px]">
                 {title}
