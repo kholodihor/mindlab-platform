@@ -15,9 +15,11 @@
     --graphite: 223, 10%, 14%;
     --darkGray: 224, 9%, 23%;
     --lightGray: 224, 5%, 45%;
+    --gray: 224, 5%, 52%;
     --grayText: 224, 5%, 52%;
     --white: 240, 2%, 92%;
     --green: 168, 97%, 34%;
+    --greenLight: 104, 100%, 29%;
     --blue: 240, 83%, 58%;
     --violet: 245, 100%, 76%;
     --lightViolet: 235, 45%, 77%;
@@ -29,7 +31,6 @@
     --bg-color-modal: rgba(170, 174, 223, 1);
     --overlay-modal: rgba(0, 0, 0, 0.8);
     --error: #da3c3c;
-    --grayPlaceholder: 	224, 8%, 72%;
     --z-index-modal: 100;
   }
 }
@@ -94,11 +95,11 @@ body {
         width: 445px;
       }
       @media screen and (min-width: 1280px) {
-        width: 720px;
+        width: 750px;
       }
-      @media screen and (min-width: 1280px) {
+      /* @media screen and (min-width: 1440px) {
         width: 725px;
-      }
+      } */
       @media screen and (min-width: 1920px) {
         width: 900px;
       }

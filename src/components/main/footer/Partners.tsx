@@ -2,7 +2,6 @@ import Modal from "react-modal"
 import { Dispatch, SetStateAction } from "react"
 import { partners } from "@/data/partners"
 import { useHeight } from "@/hooks/useHeight"
-import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 
 type PartnersProps = {
@@ -12,9 +11,7 @@ type PartnersProps = {
 const Partners = ({ isOpen, onClosePartners }: PartnersProps) => {
   const currentHeight = useHeight()
   const { t } = useTranslation("Footer")
-  useEffect(() => {
-    console.log(currentHeight)
-  }, [currentHeight])
+
   return (
     <Modal
       isOpen={isOpen}
