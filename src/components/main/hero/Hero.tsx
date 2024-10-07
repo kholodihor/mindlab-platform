@@ -2,13 +2,18 @@ import Arrow from "@/components/icons/Arrow"
 import Smile from "@/components/icons/Smile"
 import SmileO from "@/components/icons/SmileO"
 import Star from "@/components/icons/Star"
+import { useModalContext } from "@/context/ModalContext"
 import i18next from "i18next"
 import { useTranslation } from "react-i18next"
 
 const Hero = () => {
   const { t } = useTranslation("Main")
+  const { openModal } = useModalContext()
+  const handleClickModal = () => {
+    openModal("login")
+  }
   return (
-    <section className="md:pt-15 5xl:pt-22 mb-20 w-full  px-3.5 pt-8 tracking-normal sm:mb-[100px] sm:px-5 sm:pt-9 xl:mb-[152px] xl:px-10 xl:pt-20 3xl:mb-[172px] 3xl:px-20 5xl:mb-[238px] 5xl:px-20 5xl:px-20 ">
+    <section className="md:pt-15 5xl:pt-22 mb-20 w-full  px-3.5 pt-8 tracking-normal sm:mb-[100px] sm:px-5 sm:pt-9 xl:mb-[152px] xl:px-10 xl:pt-20 3xl:mb-[172px] 3xl:px-20 5xl:mb-[238px] 5xl:px-20 ">
       <div
         className={`mb-12 text-left font-['Fixel_Display',_sans-serif]  font-semibold uppercase leading-[1]  text-white  sm:mb-20 sm:text-[55px] md:text-[58px] xl:mb-[72px] xl:text-[100px] 3xl:text-[108px] 5xl:text-[150px] 
         ${i18next.language === "ua" ? "text-[40px] sm:text-[55px]" : "text-[36px] sm:text-[50px]"}`}
@@ -54,14 +59,15 @@ const Hero = () => {
             <span dangerouslySetInnerHTML={{ __html: t("hero.subTitle") }} />
           </p>
         </div>
-        <a href="/" className="flex  md:justify-end ">
-          <button className="relative h-[48px] w-[292px] cursor-pointer overflow-hidden rounded-[6px] bg-lime pl-[65.5px] [border:1px_solid_#c0ed3b] sm:h-[60px] sm:w-[390px] sm:pl-[102.5px] md:h-[48px] md:w-[342px] md:pl-[90.5px] xl:w-[285px] xl:pl-[62px] 3xl:w-[305px] 3xl:pl-[72px] 5xl:h-[60px] 5xl:w-[425px] 5xl:pl-[120px] 5xl:text-[20px]">
-            <p className="text-left text-lg font-medium  leading-[1.27] text-[#202227] sm:text-xl sm:leading-[1.5] md:text-lg 5xl:text-xl">
-              {t("hero.button")}
-            </p>
-            <Arrow className="absolute right-0 top-0 h-[48px] w-[48px] sm:h-[60px] sm:w-[60px] md:h-[48px] md:w-[48px] 5xl:h-[60px] 5xl:w-[60px]" />
-          </button>
-        </a>
+        <button
+          onClick={handleClickModal}
+          className="relative h-[48px] w-[292px] cursor-pointer overflow-hidden rounded-[6px] bg-lime pl-[65.5px] [border:1px_solid_#c0ed3b] sm:h-[60px] sm:w-[390px] sm:pl-[102.5px] md:h-[48px] md:w-[342px] md:pl-[90.5px] xl:w-[285px] xl:pl-[62px] 3xl:w-[305px] 3xl:pl-[72px] 5xl:h-[60px] 5xl:w-[425px] 5xl:pl-[120px] 5xl:text-[20px]"
+        >
+          <p className="text-left text-lg font-medium  leading-[1.27] text-[#202227] sm:text-xl sm:leading-[1.5] md:text-lg 5xl:text-xl">
+            {t("hero.button")}
+          </p>
+          <Arrow className="absolute right-0 top-0 h-[48px] w-[48px] sm:h-[60px] sm:w-[60px] md:h-[48px] md:w-[48px] 5xl:h-[60px] 5xl:w-[60px]" />
+        </button>
       </div>
     </section>
   )

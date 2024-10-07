@@ -89,7 +89,7 @@ const TabPanel = ({ tabList = [] }: TabPanelProps) => {
           {widthWiewport >= 744 && widthWiewport < 1100 && (
             <SwiperTopicList changeLesson={changeLesson} />
           )}
-          {widthWiewport > 1100 && (
+          {widthWiewport >= 1100 && (
             <div className="3md:px-10">
               <TelegramButton />
             </div>

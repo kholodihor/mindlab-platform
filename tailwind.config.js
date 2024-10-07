@@ -31,6 +31,7 @@ module.exports = {
         darkGray: "hsl(var(--darkGray))",
         lightGray: "hsl(var(--lightGray))",
         gray: "hsl(var(--gray))",
+        grayText: "hsl(var(--grayText))",
         grayPlaceholder: "hsl(var(--grayPlaceholder))",
         green: "hsl(var(--green))",
         greenLight: "hsl(var(--greenLight))",

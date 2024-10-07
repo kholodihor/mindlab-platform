@@ -17,15 +17,15 @@ export const CustomModal = ({
   return (
     <Modal
       isOpen={isOpen}
-      className="relative flex translate-y-[50px] transform items-center rounded-[6px] bg-[var(--bg-color-modal)] p-20 xs:p-14"
-      overlayClassName="fixed flex items-center justify-center top-0 left-0 w-[100vw] h-[100vh] bg-[var(--overlay-modal)] overflow-hidden overflow-y-auto z-[var(--z-index-modal)]"
+      className={`fixed z-[99999999] bg-lightViolet p-5 ${isOpen ? "slide-in" : "slide-out"} h-auto max-h-[100%] max-w-[100%] overflow-y-scroll rounded-lg md:max-h-[95%] md:max-w-[640px] 3md:max-w-[1120px] 3md:overflow-auto`}
+      overlayClassName="fixed inset-0 bg-[var(--overlay-modal)] z-[var(--z-index-modal)] flex items-center justify-center"
       ariaHideApp={false}
       // closeTimeoutMS={250}
       onRequestClose={() => onClose()}
       bodyOpenClassName="overflow-hidden"
     >
       <Button
-        className="absolute right-[20px] top-[20px] flex items-center justify-center xs:right-[52px] xs:top-[14px]"
+        className="ml-auto block h-6 w-6 md:h-[30px] md:w-[30px]"
         type="button"
         variant={"default"}
         size={"icon"}
