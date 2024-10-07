@@ -23,7 +23,7 @@ const Carousel = ({ index, data, changeLesson }: CarouselProps) => {
       >
         <img src="/course/arrow.svg" alt="aroww icon" />
       </button>
-      <p className=" text-gray">{data[indexCourse]}</p>
+      <p className="text-grayText">{data[indexCourse]}</p>
       <button
         type="button"
         className="rotate-[180deg]"

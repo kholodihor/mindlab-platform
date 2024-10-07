@@ -22,7 +22,7 @@ const TopicsList = ({ changeLesson, onClickModal }: TopicsListProps) => {
     }
   }
   return (
-    <div className="3md:w-[300px] 3md:bg-graphite 3md:pl-5 3md:pr-10 3md:pt-10 xl:w-[35%] 5xl:w-[576px]">
+    <div className=" h-screen overflow-y-scroll 3md:w-[300px] 3md:bg-graphite 3md:pl-5 3md:pr-10 3md:pt-10 xl:w-[35%] 5xl:w-[576px]">
       <Progress
         progress={progress}
         completed={lecturesCompleted}

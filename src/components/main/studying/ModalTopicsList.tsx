@@ -19,8 +19,8 @@ const ModalTopicsList = ({
   return (
     <Modal
       isOpen={isOpen}
-      className={`fixed right-0 top-0 z-[99999999] bg-black pt-[18px] ${isOpen ? "slide-in" : "slide-out"} max-h-screen overflow-y-auto`}
-      overlayClassName="fixed top-0 left-0 h-full bg-[var(--overlay-modal)] z-[var(--z-index-modal)]"
+      className={`fixed inset-0 z-[99999999] bg-black pt-[18px] ${isOpen ? "slide-in" : "slide-out"} overflow-y-auto`}
+      overlayClassName="fixed inset-0 bg-[var(--overlay-modal)] z-[var(--z-index-modal)]"
       ariaHideApp={false}
       closeTimeoutMS={250}
       onRequestClose={() => onCloseModal(false)}
