@@ -1,4 +1,5 @@
 import { FC } from "react"
+import { useTranslation } from "react-i18next"
 
 type TabButtonProps = {
   title: string
@@ -9,9 +10,10 @@ type TabButtonProps = {
 }
 
 const TabButton = ({ title, id, onClick, selectTab, Icon }: TabButtonProps) => {
+  const { t } = useTranslation("StudyingPage")
   return (
     <li
-      className={`${selectTab === id ? "border-white bg-white text-blackSecond" : " text-lightGray"} flex h-9 w-[30.48%] items-center justify-center rounded-md border sm:w-[30.34%] sm:justify-normal md:w-[124px] `}
+      className={`${selectTab === id ? "border-white bg-white text-blackSecond" : " text-lightGray"} flex h-9 w-[30.48%] items-center justify-center rounded-md border sm:w-[31%] sm:justify-normal md:w-[132px] `}
     >
       <button
         className={`flex items-center justify-center`}
@@ -23,7 +25,7 @@ const TabButton = ({ title, id, onClick, selectTab, Icon }: TabButtonProps) => {
         >
           <Icon />
         </div>
-        <p className="text-center sm:w-[83px] md:w-auto">{title}</p>
+        <p className="text-center sm:w-[82px] md:w-[92px]">{t(`${title}`)}</p>
       </button>
     </li>
   )

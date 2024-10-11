@@ -49,5 +49,28 @@
     "partners": "Partners",
     "blog": "blog",
     "blogLeptop": "Our blog"
+  },
+  "StudyingPage": {
+    "lesson": "Lesson",
+    "video": "Video",
+    "theory": "Theory",
+    "homework": "Homework",
+    "chat": "Teacher's chat",
+    "program": "Course program",
+    "duration": "Duration",
+    "minutes": "minutes",
+    "presentation": "Presentation of the lesson:",
+    "materials": "Additional materials:",
+    "test": "Test task:",
+    "maximumScore": "Maximum score: 100",
+    "studying": "Studying"
+  },
+  "Progress": {
+    "progress": "My progress:",
+    "lesson": "lessons",
+    "text": "12 days until the end of the course",
+    "passed": "Passed:",
+    "submitted": "Submitted:",
+    "homework": "homework"
   }
 }

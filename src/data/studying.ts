@@ -14,244 +14,327 @@ type TabPanelProps = {
 }
 
 export type TopicsList = {
-  name: string
-  description: string
+  nameUa: string
+  nameEn: string
+  descriptionUa: string
+  descriptionEn: string
   duration: number
   completed: boolean
   lecture: string
   number: number
-  theory: string
+  theoryUa: string
+  theoryEn: string
   presentation: string
   additionalMaterials: string
 }
 
 export const tabPanel: Array<TabPanelProps> = [
-  { id: 1, title: "Відео", Icon: VideoIcon, Component: Video },
-  { id: 2, title: "Теорія", Icon: TheoryIcon, Component: Theory },
-  { id: 3, title: "Домашка", Icon: HomeWorkIcon, Component: HomeWork }
+  { id: 1, title: "video", Icon: VideoIcon, Component: Video },
+  { id: 2, title: "theory", Icon: TheoryIcon, Component: Theory },
+  { id: 3, title: "homework", Icon: HomeWorkIcon, Component: HomeWork }
 ]
 
 export const topicsList: Array<TopicsList> = [
   {
-    name: "Що таке політика",
-    description:
+    nameUa: "Що таке політика",
+    nameEn: "What is politics?",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 1,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Політика і політичне життя суспільства",
-    description:
+    nameUa: "Політика і політичне життя суспільства",
+    nameEn: "Politics and political life of society",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 2,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Влада і політичні режими",
-    description:
+    nameUa: "Влада і політичні режими",
+    nameEn: "Power and political regimes",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 3,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Демократія: поняття, теорія, модель",
-    description:
+    nameUa: "Демократія: поняття, теорія, модель",
+    nameEn: "Democracy: concept, theory, model",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 4,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Політична еліта та лідерство, Держава в політичній системі",
-    description:
+    nameUa: "Політична еліта та лідерство, Держава в політичній системі",
+    nameEn: "Political elite and leadership, State in the political system",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: false,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 5,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Громадянське суспільство та правова держава",
-    description:
+    nameUa: "Громадянське суспільство та правова держава",
+    nameEn: "Civil society and the rule of law",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: false,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 6,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Політичні партії та системи",
-    description:
+    nameUa: "Політичні партії та системи",
+    nameEn: "Political parties and systems",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 7,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Політична культура та етика",
-    description:
+    nameUa: "Політична культура та етика",
+    nameEn: "Political culture and ethics",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 8,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Соціально-політичні ідеології і течії у сучасному світі",
-    description:
+    nameUa: "Соціально-політичні ідеології і течії у сучасному світі",
+    nameEn: "Socio-political ideologies and currents in the modern world",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: false,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 9,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Політика Європейських держав",
-    description:
+    nameUa: "Політика Європейських держав",
+    nameEn: "Policy of European states",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: false,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 10,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Діяльність Міжнародних інституцій",
-    description:
+    nameUa: "Діяльність Міжнародних інституцій",
+    nameEn: "Activities of International Institutions",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: false,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 11,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Соціологія нації",
-    description:
+    nameUa: "Соціологія нації",
+    nameEn: "Sociology of the nation",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: false,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 12,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Соціологія особистості",
-    description:
+    nameUa: "Соціологія особистості",
+    nameEn: "Sociology of personality",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: false,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 13,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Альтернативна соціологія",
-    description:
+    nameUa: "Альтернативна соціологія",
+    nameEn: "Alternative sociology",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: false,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 14,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Функції соціології та її роль у розвитку суспільства",
-    description:
+    nameUa: "Функції соціології та її роль у розвитку суспільства",
+    nameEn: "Functions of sociology and its role in the development of society",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: false,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 15,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"
   },
   {
-    name: "Конфліктологія",
-    description:
+    nameUa: "Конфліктологія",
+    nameEn: "Conflictology",
+    descriptionUa:
       "Аналіз взаємодії соціальних мереж і політичної активності серед молоді в сучасному суспільстві. Дослідження впливу інформаційного контенту на політичні переконання.",
+    descriptionEn:
+      "Analysis of the interaction of social networks and political activity among young people in modern society. Study of the impact of information content on political beliefs.",
     duration: 15,
     completed: false,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 16,
-    theory:
+    theoryUa:
       "На головній сторінці в хедері є клікабельна кнопка у вигляді іконки користувача з права, напроти зліва клікабельний логотип, що при натисканні повертає до головної сторінки При натисканні на кнопку-іконку користувач зявляється спливаюче вікно",
+    theoryEn:
+      "On the main page in the header, there is a clickable button in the form of a user icon on the right, opposite on the left is a clickable logo, which, when clicked, returns to the main page. When the user clicks on the button-icon, a pop-up window appears",
     presentation: "https://www.behance.net/gallery/192084565/Web-Design-UIUX",
     additionalMaterials:
       "https://www.behance.net/gallery/192084565/Web-Design-UIUX"

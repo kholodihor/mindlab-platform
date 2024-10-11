@@ -1,13 +1,12 @@
 import { Navigation } from "swiper/modules"
 import { topicsList } from "@/data/studying"
 import { useRef, useState } from "react"
-
 import { Swiper, SwiperSlide } from "swiper/react"
 
-// Import Swiper styles
 import "swiper/css"
 import "swiper/css/navigation"
 import CurrentTopic from "./CurrentTopic"
+import { useTranslation } from "react-i18next"
 const SwiperTopicList = ({
   changeLesson
 }: {
@@ -15,6 +14,10 @@ const SwiperTopicList = ({
 }) => {
   const sliderRef = useRef(null)
   const [activeSlide, setActiveSlide] = useState(1)
+  const { i18n } = useTranslation()
+  const { t } = useTranslation("StudyingPage")
+  const currentLanguage = i18n.language as "en" | "ua"
+
   const handlePrev = () => {
     if (sliderRef && sliderRef.current) {
       ;(sliderRef.current as any).slidePrev()
@@ -45,17 +48,18 @@ const SwiperTopicList = ({
           ;(sliderRef.current as any) = swiper
         }}
         onSlideChange={handleSlideChange}
+        className="mb-5"
       >
-        {topicsList.map(({ name, duration, completed, number }) => (
+        {topicsList.map(({ nameUa, nameEn, duration, completed, number }) => (
           <SwiperSlide
             onClick={() => changeLesson(activeSlide)}
             key={number}
-            className={`${activeSlide === number ? "bg-darkGray" : ""}  border-t border-darkGray py-5 pl-8 pr-5 md:w-[400px]`}
+            className={`${activeSlide === number ? "bg-darkGray" : "bg-graphite"} flex flex-wrap rounded-md p-5 pl-8 md:h-[127px] md:w-[400px]`}
           >
-            <div className="mb-3 flex justify-between md:mb-0">
+            <div className="mb-3 flex w-[100%] justify-between overflow-y-hidden md:mb-3 md:h-[54px]">
               <p className="w-[90%] sm:text-lg">
-                <span className="text-lightViolet">Урок {number}.</span>
-                {name}
+                <span className="mr-2 text-lightViolet">{`${t("lesson")} ${number}.`}</span>
+                {currentLanguage === "en" ? nameEn : nameUa}
               </p>
               <div
                 className={`h-[23.1px] w-[23.1px] rounded-full ${completed ? "bg-greenLight" : "bg-gray"} flex items-center justify-center`}
@@ -63,9 +67,14 @@ const SwiperTopicList = ({
                 <img src="/stugying/check.svg" alt="check icon" />
               </div>
             </div>
-            <div className="flex gap-1 ">
-              <p className=" text-sm text-gray">Тривалість {duration}хв</p>
-              <img src="/stugying/oclock.svg" alt="oclock icon" />
+            <div className="flex w-[100%] content-between items-center gap-1">
+              <p className=" text-sm text-gray">{`${t("duration")} ${duration} ${t("minutes")}`}</p>
+              <img
+                src="/stugying/oclock.svg"
+                alt="oclock icon"
+                width={12}
+                height={12}
+              />
             </div>
           </SwiperSlide>
         ))}

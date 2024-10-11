@@ -1,5 +1,6 @@
 import { useState } from "react"
 import ModalTopicsList from "./ModalTopicsList"
+import { useTranslation } from "react-i18next"
 
 type ProgramProps = {
   title: string
@@ -7,6 +8,7 @@ type ProgramProps = {
 }
 
 const Program = ({ title, changeLesson }: ProgramProps) => {
+  const { t } = useTranslation("StudyingPage")
   const [showModal, setShowmodal] = useState(false)
   return (
     <div className="w-[65.1%]">
@@ -14,7 +16,7 @@ const Program = ({ title, changeLesson }: ProgramProps) => {
         onClick={() => setShowmodal(true)}
         className="h-9 w-[100%] rounded-md bg-graphite text-sm text-lightViolet"
       >
-        Програма курсу
+        {t("program")}
       </button>
       {showModal && (
         <ModalTopicsList
