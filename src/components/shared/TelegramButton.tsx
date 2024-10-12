@@ -1,8 +1,10 @@
 import { useWidth } from "@/hooks/useWidth"
 import TelegramIcon from "../icons/studying/TelegramIcon"
+import { useTranslation } from "react-i18next"
 
 const TelegramButton = () => {
   const widthWiewport = useWidth()
+  const { t } = useTranslation("StudyingPage")
   return (
     <a
       href=""
@@ -11,9 +13,7 @@ const TelegramButton = () => {
       <div className="h-6 w-6 text-lightViolet">
         <TelegramIcon width={24} />
       </div>
-      {widthWiewport >= 744 && (
-        <p className=" text-lightViolet">Чат викладача</p>
-      )}
+      {widthWiewport >= 744 && <p className=" text-lightViolet">{t("chat")}</p>}
     </a>
   )
 }

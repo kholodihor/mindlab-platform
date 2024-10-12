@@ -8,16 +8,16 @@ const LanguageSwitcher = ({ activeColor }: { activeColor: string }) => {
       <button
         type="submit"
         onClick={() => i18n.changeLanguage("en")}
-        className={`text-gray cursor-pointer border-none text-[16px] 
+        className={`cursor-pointer border-none text-[16px] text-gray 
             ${i18n.resolvedLanguage === "en" && activeColor}`}
       >
         ENG
       </button>
-      <span className="text-gray inline-block px-[3px] text-[17px]">|</span>
+      <span className="inline-block px-[3px] text-[17px] text-gray">|</span>
       <button
         type="submit"
         onClick={() => i18n.changeLanguage("ua")}
-        className={`text-gray cursor-pointer border-none text-[16px] 
+        className={`cursor-pointer border-none text-[16px] text-gray 
             ${i18n.resolvedLanguage === "ua" && activeColor}`}
       >
         УКР

@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next"
+
 interface TopicsProps {
   handlePrev: () => void
   handleNext: () => void
@@ -5,6 +7,7 @@ interface TopicsProps {
 }
 
 const CurrentTopic = ({ handleNext, handlePrev, lesson }: TopicsProps) => {
+  const { t } = useTranslation("StudyingPage")
   return (
     <div className="mb-6 flex w-[100%] justify-between px-4 py-2">
       <button
@@ -16,7 +19,7 @@ const CurrentTopic = ({ handleNext, handlePrev, lesson }: TopicsProps) => {
       >
         <img src="/course/arrow.svg" alt="aroww icon" />
       </button>
-      <p className=" text-gray">{`Урок ${lesson}`}</p>
+      <p className=" text-gray">{`${t("lesson")} ${lesson}`}</p>
       <button
         type="button"
         className="rotate-[180deg]"

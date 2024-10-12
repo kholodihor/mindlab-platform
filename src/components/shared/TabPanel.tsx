@@ -1,12 +1,13 @@
 import { FC, useState } from "react"
 import TabButton from "@/components/shared/TabButton"
 import { topicsList } from "@/data/studying"
-import SwiperTopicList from "../main/studying/SwiperTopicList"
 import { useWidth } from "@/hooks/useWidth"
 import Carousel from "./Carousel"
 import Program from "../main/studying/Program"
 import TelegramButton from "./TelegramButton"
 import TopicsList from "../main/studying/TopicsList"
+import { useTranslation } from "react-i18next"
+import SwiperTopicList from "../main/studying/SwiperTopicList"
 
 type TabPanelProps = {
   tabList: {
@@ -22,6 +23,9 @@ const TabPanel = ({ tabList = [] }: TabPanelProps) => {
   const current = topicsList.find(({ number }) => number === lesson)
   const panel = tabList.find((tab) => tab.id === selectedTab)
   const widthWiewport = useWidth()
+  const { i18n } = useTranslation()
+  const currentLanguage = i18n.language as "en" | "ua"
+  const { t } = useTranslation("StudyingPage")
 
   const [showDescriptionTopic, setshowDescriptionTopic] = useState(false)
 
@@ -48,26 +52,28 @@ const TabPanel = ({ tabList = [] }: TabPanelProps) => {
           </ul>
           {widthWiewport >= 744 && widthWiewport < 1100 && <TelegramButton />}
         </div>
-        <div className="mb-6 ">
+        <div className="mb-6">
           <div
-            className={`flex items-end justify-between px-[14px] md:px-5 3md:px-10 ${showDescriptionTopic ? " mb-2" : " mb-6"}`}
+            className={`flex items-end justify-between px-[14px] md:px-5 3md:px-10 ${showDescriptionTopic ? " mb-2 md:mb-1" : " mb-6 md:mb-1"}`}
             onClick={() => setshowDescriptionTopic((prev) => !prev)}
           >
-            <h2 className="font-medium xl:text-xl">
-              {current?.number}. {current?.name}
+            <h2 className="font-medium md:text-xl">
+              {current?.number}.{" "}
+              {currentLanguage === "en" ? current?.nameEn : current?.nameUa}
             </h2>
             <img
               src="/stugying/arrow.svg"
               alt="aroww icon"
-              className={`${showDescriptionTopic ? "" : "rotate-180"}`}
+              className={`${showDescriptionTopic ? "" : "rotate-180"} md:hidden`}
             />
           </div>
-          {showDescriptionTopic && (
-            <p className="mb-6 px-[14px] text-lightGray md:px-5 3md:px-10">
-              {current?.description}
+          {(showDescriptionTopic || widthWiewport >= 744) && (
+            <p className="mb-6 px-[14px] font-medium text-grayText md:mb-10 md:px-5 md:text-lg 3md:px-10">
+              {currentLanguage === "en"
+                ? current?.descriptionEn
+                : current?.descriptionUa}
             </p>
           )}
-
           {panel && <panel.Component topic={current} />}
           {widthWiewport < 744 && (
             <div className="mb-6  flex justify-between px-[14px]">
@@ -78,11 +84,10 @@ const TabPanel = ({ tabList = [] }: TabPanelProps) => {
               />
             </div>
           )}
-
           {widthWiewport < 744 && (
             <Carousel
               index={lesson}
-              data={topicsList.map(({ number }) => `Урок ${number}`)}
+              data={topicsList.map(({ number }) => `${t("lesson")} ${number}`)}
               changeLesson={changeLesson}
             />
           )}
