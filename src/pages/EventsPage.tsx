@@ -1,8 +1,10 @@
 import PageHeader from "@/components/shared/PageHeader"
 import TabLayout from "@/components/shared/TabLayout"
-import { tabPanel } from "@/data/events"
+import { useEventsData } from "@/hooks/useEventsData"
 
 const EventsPage = () => {
+  const { tabPanel } = useEventsData()
+  console.log(tabPanel)
   return (
     <div className="pb-10">
       <PageHeader title="Події" />
