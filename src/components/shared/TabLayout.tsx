@@ -6,8 +6,8 @@ type TabPanelProps = {
     id: number
     title: string
     Icon: FC
-    Component: FC<{ data: any[] }>
-    data?: any
+    Component: FC<{ category?: string }>
+    category?: string
   }[]
 }
 
@@ -32,7 +32,9 @@ const TabPanel = ({ tabList = [] }: TabPanelProps) => {
             />
           ))}
       </ul>
-      <div className="">{panel && <panel.Component data={panel.data} />}</div>
+      <div className="">
+        {panel && <panel.Component category={panel.category} />}
+      </div>
     </div>
   )
 }
