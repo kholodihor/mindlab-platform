@@ -8,10 +8,10 @@ export const LoginForm = ({
   handleClickModal: () => void
 }) => {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center 3md:flex-row">
+    <div className="flex h-full w-full min-w-[70vw] flex-col items-center justify-center 3md:flex-row">
       <BlockText />
       <BlockForm handleClickModal={handleClickModal} />
-      <div className=" 3md:hidden">
+      <div className="3md:hidden">
         <GirlWithCap />
       </div>
     </div>

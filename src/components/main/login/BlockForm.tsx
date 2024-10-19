@@ -13,6 +13,7 @@ import { useDispatch } from "react-redux"
 import { saveToken } from "@/store/features/authSlice.ts"
 import { ButtonLogin } from "@/components/main/login/ButtonLogin.tsx"
 import { useNavigate } from "react-router-dom"
+import SmallLoader from "@/components/shared/small_loader/SmallLoader"
 
 interface User {
   email: string
@@ -79,7 +80,7 @@ export const BlockForm = ({
   return (
     <>
       {isLoading ? (
-        <div>Завантаження...</div>
+        <SmallLoader />
       ) : (
         <form
           className={
