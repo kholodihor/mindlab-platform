@@ -10,6 +10,7 @@ import EventsPage from "./pages/EventsPage"
 import BoardPage from "./pages/BoardPage"
 import SupportPage from "./pages/SupportPage"
 import StudyingPage from "./pages/StudyingPage"
+import CertificatePage from "./pages/CertificatePage"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/student/events" element={<EventsPage />} />
           <Route path="/student/board" element={<BoardPage />} />
           <Route path="/student/support" element={<SupportPage />} />
+          <Route path="/student/certificate" element={<CertificatePage />} />
         </Route>
         <Route path="/studying" element={<StudyingPage />} />
       </Routes>
