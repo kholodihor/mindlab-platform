@@ -7,6 +7,7 @@ interface CertificateInfoListProps {
     tutor: string
     lectureDuration: number
     lecturesQuantity: number
+    homeworkQuantity: number
     score: number
   }
 }
@@ -15,27 +16,34 @@ const CertificateInfoList: React.FC<CertificateInfoListProps> = ({
   certificate
 }) => {
   const certificateInfoList = [
-    { title: certificate.tutor, subtitle: "Куратор", icon: <Smile /> },
+    {
+      title: certificate.tutor,
+      subtitle: "Куратор",
+      icon: <Smile size={14} color="#6d7078" strokeWidth={2} />
+    },
     {
       title: "Прослухано лекцій",
       subtitle: `Загальна тривалість лекцій ${certificate.lectureDuration} год`,
-      icon: <AlarmClock />
+      icon: <AlarmClock size={14} color="#6d7078" strokeWidth={2} />,
+      quantity: certificate.lecturesQuantity
     },
     {
-      title: `Середній бал: ${certificate.score}`,
-      subtitle: `Здано ${certificate.lecturesQuantity} домашніх завдань`,
-      icon: <Layers3 />
+      title: `Середній бал`,
+      subtitle: `Здано ${certificate.homeworkQuantity} домашніх завдань`,
+      icon: <Layers3 size={14} color="#6d7078" strokeWidth={2} />,
+      quantity: certificate.score
     }
   ]
 
   return (
-    <ul className="space-y-3">
+    <ul className="max-w-[439px] space-y-3 ">
       {certificateInfoList.map((info, index) => (
         <CertificateInfoItem
           key={index}
           title={info.title}
           subtitle={info.subtitle}
           icon={info.icon}
+          quantity={info.quantity}
         />
       ))}
     </ul>

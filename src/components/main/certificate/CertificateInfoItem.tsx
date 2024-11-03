@@ -14,13 +14,15 @@ const CertificateInfoItem: React.FC<CertificateCardProps> = ({
   quantity
 }) => {
   return (
-    <div className="my-4 max-w-[359px] rounded-lg border border-[#353840] border-opacity-50 p-5 md:p-8">
-      <h2 className="mb-2 text-xl font-semibold">{title}</h2>
-      <div className="flex">
-        {icon}
-        <p className="mb-3 text-lg text-gray-600">{subtitle}</p>
+    <div className="my-4 flex items-center justify-between gap-5 rounded-lg border border-[#6D7078] border-opacity-50 p-5">
+      <div>
+        <h2 className="mb-2 mt-0 text-lg font-semibold">{title}</h2>
+        <div className="flex items-center gap-1">
+          <div>{icon}</div>
+          <p className="text-sm text-[#6D7078]">{subtitle}</p>
+        </div>
       </div>
-      {quantity && <p className="text-sm font-bold"> {quantity}</p>}
+      <div>{quantity && <p className="text-3xl font-bold"> {quantity}</p>}</div>
     </div>
   )
 }

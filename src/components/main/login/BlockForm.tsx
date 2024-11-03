@@ -11,8 +11,9 @@ import { SerializedError } from "@reduxjs/toolkit"
 import { FetchBaseQueryError } from "@reduxjs/toolkit/query"
 import { useDispatch } from "react-redux"
 import { saveToken } from "@/store/features/authSlice.ts"
-import { ButtonLogin } from "@/components/main/login/ButtonLogin.tsx";
-import {useNavigate} from "react-router-dom";
+import { ButtonLogin } from "@/components/main/login/ButtonLogin.tsx"
+import { useNavigate } from "react-router-dom"
+import SmallLoader from "@/components/shared/small_loader/SmallLoader"
 
 interface User {
   email: string
@@ -79,10 +80,12 @@ export const BlockForm = ({
   return (
     <>
       {isLoading ? (
-        <div>Завантаження...</div>
+        <SmallLoader />
       ) : (
         <form
-          className={"w-[480px] rounded-[6px] bg-[#FFFFFF] p-[23px_55px] sm:w-[390px] xs:w-[292px] xs:p-[20px_14px]"}
+          className={
+            "w-[480px] rounded-[6px] bg-[#FFFFFF] p-[23px_55px] xs:w-[292px] xs:p-[20px_14px] sm:w-[390px]"
+          }
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className={"mb-10 flex flex-col gap-6 text-left"}>

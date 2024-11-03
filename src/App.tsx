@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<HeroPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/student" element={<StudentLayout />}>
-          <Route path="/student/courses" element={<CoursesPage />} />
+          <Route path="/student/studying" element={<CoursesPage />} />
           <Route path="/student/schedule" element={<SchedulePage />} />
           <Route path="/student/speaking" element={<SpeakingClubPage />} />
           <Route path="/student/events" element={<EventsPage />} />
@@ -27,7 +27,6 @@ function App() {
           <Route path="/student/support" element={<SupportPage />} />
           <Route path="/student/certificate" element={<CertificatePage />} />
         </Route>
-        <Route path="/studying" element={<StudyingPage />} />
       </Routes>
     </ModalProvider>
   )

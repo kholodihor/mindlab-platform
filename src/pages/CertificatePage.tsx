@@ -1,5 +1,6 @@
 import CertificateInfo from "@/components/main/certificate/CertificateInfo"
 import PageHeader from "@/components/shared/PageHeader"
+import { useTranslation } from "react-i18next"
 
 const certificateData = {
   src: "/images/certificates/certificate.jpg",
@@ -11,9 +12,11 @@ const certificateData = {
   homeworkQuantity: 6
 }
 const CertificatePage = () => {
+  const { t } = useTranslation("CertificatePage")
+
   return (
     <div>
-      <PageHeader title="Сертифікати" />
+      <PageHeader title={t("pageTitle")} />
       <CertificateInfo certificate={certificateData} />
     </div>
   )

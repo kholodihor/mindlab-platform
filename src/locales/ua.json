@@ -50,5 +50,31 @@
     "partners": "Партнери",
     "blog": "блог",
     "blogLeptop": "наш блог"
+  },
+  "StudyingPage": {
+    "lesson": "Урок",
+    "video": "Відео",
+    "theory": "Теорія",
+    "homework": "Домашка",
+    "chat": "Чат викладача",
+    "program": "Програма курсу",
+    "duration": "Тривалість",
+    "minutes": "хв",
+    "presentation": "Презентація уроку:",
+    "materials": "Додаткові матеріали:",
+    "test": "Тестове завдання:",
+    "maximumScore": "Максимальний бал: 100",
+    "studying": "Навчання"
+  },
+  "Progress": {
+    "progress": "Мій прогрес:",
+    "lesson": "уроків",
+    "text": "до завершення курсу 12 днів",
+    "passed": "Пройдено:",
+    "submitted": "Здано:",
+    "homework": "домашок"
+  },
+  "CertificatePage": {
+    "pageTitle": "Сертифікати"
   }
 }

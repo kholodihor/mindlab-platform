@@ -20,7 +20,7 @@ const Sidebar = () => {
       <ul className="flex flex-row items-center xs:gap-2.5 md:gap-0 xl:flex-col xl:gap-[15px]">
         <li className="xs:w-1/6 xl:w-full">
           <NavLink
-            to={"/student/courses"}
+            to={"/student/studying"}
             className="flex w-full cursor-pointer flex-col items-center gap-[10px] rounded-lg py-5 xs:bg-graphite xs:px-3 xs:py-2.5 xs:text-lightViolet sm:px-[22px] sm:py-3 md:px-0 md:py-[16px] md:text-lightGray"
           >
             <CoursesIcon width={24} />
