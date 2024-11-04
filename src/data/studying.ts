@@ -6,14 +6,14 @@ import VideoIcon from "@/components/icons/studying/VideoIcon"
 import TheoryIcon from "@/components/icons/studying/TheoryIcon"
 import HomeWorkIcon from "@/components/icons/studying/HomeWorkIcon"
 
-type TabPanelProps = {
+export type TabPanelProps = {
   id: number
   title: string
   Icon: FC
   Component: FC
 }
 
-export type TopicsList = {
+export type TopicsListProp = {
   nameUa: string
   nameEn: string
   descriptionUa: string
@@ -34,7 +34,7 @@ export const tabPanel: Array<TabPanelProps> = [
   { id: 3, title: "homework", Icon: HomeWorkIcon, Component: HomeWork }
 ]
 
-export const topicsList: Array<TopicsList> = [
+export const topicsList: Array<TopicsListProp> = [
   {
     nameUa: "Що таке політика",
     nameEn: "What is politics?",

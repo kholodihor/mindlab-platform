@@ -1,10 +1,11 @@
+import SpeakingClub from "@/components/main/speakingClub/SpeakingClub"
 import PageHeader from "@/components/shared/PageHeader"
 
 const SpeakingClubPage = () => {
   return (
     <div>
       <PageHeader title="Speaking Club" />
-      speaking club
+      <SpeakingClub />
     </div>
   )
 }

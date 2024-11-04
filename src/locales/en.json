@@ -63,7 +63,8 @@
     "materials": "Additional materials:",
     "test": "Test task:",
     "maximumScore": "Maximum score: 100",
-    "studying": "Studying"
+    "studying": "Studying",
+    "zoom": "Zoom"
   },
   "Progress": {
     "progress": "My progress:",
@@ -72,5 +73,8 @@
     "passed": "Passed:",
     "submitted": "Submitted:",
     "homework": "homework"
+  },
+  "Zoom": {
+    "zoom": "Link to classes"
   }
 }

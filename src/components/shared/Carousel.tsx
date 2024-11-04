@@ -9,7 +9,7 @@ interface CarouselProps {
 const Carousel = ({ index, data, changeLesson }: CarouselProps) => {
   const [indexCourse, setIndexCourse] = useState(index - 1)
   return (
-    <div className="mb-6 flex w-[100%] justify-between px-4 py-2">
+    <div className="mb-10 flex w-[100%] justify-between px-4 py-2 sm:px-5">
       <button
         type="button"
         className=" block w-6 rotate-[360deg]"
