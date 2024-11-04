@@ -1,8 +1,7 @@
+import { Event } from "@/types"
+
 interface EventCardProps {
-  event: {
-    id: number
-    url: string
-  }
+  event: Event
 }
 
 const EventCard = ({ event }: EventCardProps) => {
