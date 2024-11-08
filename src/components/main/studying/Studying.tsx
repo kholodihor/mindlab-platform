@@ -3,12 +3,12 @@ import Carousel from "@/components/shared/Carousel"
 import TabPanel from "@/components/shared/TabPanel"
 import { tabPanel } from "@/data/studying"
 import { useWidth } from "@/hooks/useWidth"
-import Progress from "@/components/main/studying/Progress"
+import Progress from "@/components/shared/Progress"
 import { topicsList } from "@/data/studying"
 import { useTranslation } from "react-i18next"
 import TelegramButton from "@/components/shared/TelegramButton"
-import Program from "@/components/main/studying/Program"
-import SwiperTopicList from "@/components/main/studying/SwiperTopicList"
+import Program from "@/components/shared/Program"
+import SwiperTopicList from "@/components/main/studying/swiper/SwiperTopicList"
 import TopicsList from "@/components/main/studying/TopicsList"
 
 const courses = [
@@ -54,6 +54,7 @@ const Studying = () => {
             <Program
               title={"Political Science-Sociology"}
               changeLesson={changeLesson}
+              TopicList={TopicsList}
             />
           </div>
         )}

@@ -14,13 +14,8 @@ type TabPanelProps = {
 }
 const TabPanel = ({ tabList = [], currentLesson }: TabPanelProps) => {
   const [selectedTab, setSelectedTab] = useState(tabList[0].id)
-  // const current = topicsList.find(({ number }) => number === lesson)
   const panel = tabList.find((tab) => tab.id === selectedTab)
-  // const { i18n } = useTranslation()
-  // const currentLanguage = i18n.language as "en" | "ua"
   const widthWiewport = useWidth()
-
-  // const [showDescriptionTopic, setshowDescriptionTopic] = useState(false)
 
   return (
     <div className="mb-6">

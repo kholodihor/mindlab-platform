@@ -12,9 +12,8 @@ export const tabPanel: Array<TabPanelProps> = [
   { id: 3, title: "homework", Icon: HomeWorkIcon, Component: HomeWork }
 ]
 
-export type TopicsListProp = {
+export type TopicsListEnProp = {
   name: string
-  duration: number
   completed: boolean
   lecture: string
   number: number
@@ -23,10 +22,9 @@ export type TopicsListProp = {
   additionalMaterials: string
 }
 
-export const topicsList: Array<TopicsListProp> = [
+export const topicsList: Array<TopicsListEnProp> = [
   {
     name: "Introduction to Politicsname",
-    duration: 45,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 1,
@@ -38,7 +36,6 @@ export const topicsList: Array<TopicsListProp> = [
   },
   {
     name: "Introduction to Politics Introduction to Politics ",
-    duration: 45,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 2,
@@ -50,7 +47,6 @@ export const topicsList: Array<TopicsListProp> = [
   },
   {
     name: "Introduction to Politics",
-    duration: 45,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 3,
@@ -62,7 +58,6 @@ export const topicsList: Array<TopicsListProp> = [
   },
   {
     name: "The influence of social networks on young people",
-    duration: 45,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 4,
@@ -74,7 +69,6 @@ export const topicsList: Array<TopicsListProp> = [
   },
   {
     name: "Introduction to Politicsname",
-    duration: 45,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 5,
@@ -86,7 +80,6 @@ export const topicsList: Array<TopicsListProp> = [
   },
   {
     name: "Introduction to Politics ",
-    duration: 45,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 6,
@@ -98,7 +91,6 @@ export const topicsList: Array<TopicsListProp> = [
   },
   {
     name: "The influence of social networks on young people",
-    duration: 45,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 7,
@@ -110,7 +102,6 @@ export const topicsList: Array<TopicsListProp> = [
   },
   {
     name: "The influence of social networks on young people",
-    duration: 45,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 8,
@@ -122,7 +113,6 @@ export const topicsList: Array<TopicsListProp> = [
   },
   {
     name: "The influence of social networks on young people",
-    duration: 45,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 9,
@@ -134,7 +124,6 @@ export const topicsList: Array<TopicsListProp> = [
   },
   {
     name: "The influence of social networks on young people",
-    duration: 45,
     completed: true,
     lecture: "https://www.youtube.com/watch?v=G16Cg7Kn1z4",
     number: 10,

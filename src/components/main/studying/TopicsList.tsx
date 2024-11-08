@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { topicsList } from "@/data/studying"
-import Progress from "./Progress"
+import Progress from "../../shared/Progress"
 import { useTranslation } from "react-i18next"
 import TopicItem from "@/components/shared/TopicItem"
 
@@ -30,7 +30,7 @@ const TopicsList = ({ changeLesson, onClickModal }: TopicsListProps) => {
       <Progress
         progress={progress}
         completed={lecturesCompleted}
-        course="Career guidance"
+        course="Speaking club"
       />
       <ul className="3md:flex 3md:flex-wrap 3md:gap-2">
         {topicsList.map(({ nameUa, nameEn, duration, completed, number }) => (
