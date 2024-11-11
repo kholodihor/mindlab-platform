@@ -1,22 +1,19 @@
 import { Navigation } from "swiper/modules"
-import { topicsList } from "@/data/studying"
+import { topicsList } from "@/data/speakingClub"
 import { useRef, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
+import NavigationBtn from "../studying/swiper/NavigationBtn"
 
 import "swiper/css"
 import "swiper/css/navigation"
-import CurrentTopic from "./CurrentTopic"
-import { useTranslation } from "react-i18next"
-const SwiperTopicList = ({
+
+const SwiperTopicEn = ({
   changeLesson
 }: {
   changeLesson: (lesson: number) => void
 }) => {
   const sliderRef = useRef(null)
   const [activeSlide, setActiveSlide] = useState(1)
-  const { i18n } = useTranslation()
-  const { t } = useTranslation("StudyingPage")
-  const currentLanguage = i18n.language as "en" | "ua"
 
   const handlePrev = () => {
     if (sliderRef && sliderRef.current) {
@@ -50,7 +47,7 @@ const SwiperTopicList = ({
         onSlideChange={handleSlideChange}
         className="mb-5"
       >
-        {topicsList.map(({ nameUa, nameEn, duration, completed, number }) => (
+        {topicsList.map(({ name, completed, number }) => (
           <SwiperSlide
             onClick={() => changeLesson(activeSlide)}
             key={number}
@@ -58,8 +55,8 @@ const SwiperTopicList = ({
           >
             <div className="mb-3 flex w-[100%] justify-between overflow-y-hidden md:mb-3 md:h-[54px]">
               <p className="w-[90%] sm:text-lg">
-                <span className="mr-2 text-lightViolet">{`${t("lesson")} ${number}.`}</span>
-                {currentLanguage === "en" ? nameEn : nameUa}
+                <span className="mr-2 text-lightViolet">{`Lesson ${number}.`}</span>
+                {name}
               </p>
               <div
                 className={`h-[23.1px] w-[23.1px] rounded-full ${completed ? "bg-greenLight" : "bg-gray"} flex items-center justify-center`}
@@ -68,7 +65,7 @@ const SwiperTopicList = ({
               </div>
             </div>
             <div className="flex w-[100%] content-between items-center gap-1">
-              <p className=" text-sm text-gray">{`${t("duration")} ${duration} ${t("minutes")}`}</p>
+              <p className=" text-sm text-gray underline">Online scheduled</p>
               <img
                 src="/stugying/oclock.svg"
                 alt="oclock icon"
@@ -79,7 +76,7 @@ const SwiperTopicList = ({
           </SwiperSlide>
         ))}
       </Swiper>
-      <CurrentTopic
+      <NavigationBtn
         lesson={activeSlide}
         handleNext={handleNext}
         handlePrev={handlePrev}
@@ -88,4 +85,4 @@ const SwiperTopicList = ({
   )
 }
 
-export default SwiperTopicList
+export default SwiperTopicEn

@@ -1,20 +1,19 @@
 import Modal from "react-modal"
 import { Dispatch, SetStateAction } from "react"
 import ArrowIcon from "@/components/icons/studying/ArrowIcon"
-import TopicsList from "./TopicsList"
 
 interface ModalProps {
   isOpen: boolean
   onCloseModal: Dispatch<SetStateAction<boolean>>
-  title: string
-  changeLesson: (lesson: number) => void
+  title?: string
+  children: React.ReactNode
 }
 
 const ModalTopicsList = ({
   isOpen,
   onCloseModal,
   title,
-  changeLesson
+  children
 }: ModalProps) => {
   return (
     <Modal
@@ -26,7 +25,7 @@ const ModalTopicsList = ({
       onRequestClose={() => onCloseModal(false)}
       bodyOpenClassName="overflow-hidden"
     >
-      <div className="mb-5 flex items-center gap-2 px-[14px]">
+      <div className="mb-5 flex items-center gap-2 px-[14px] sm:px-5">
         <div
           className="flex rotate-[270deg] items-center justify-center"
           onClick={() => onCloseModal(false)}
@@ -35,7 +34,7 @@ const ModalTopicsList = ({
         </div>
         <h2 className="text-lg">{title}</h2>
       </div>
-      <TopicsList changeLesson={changeLesson} onClickModal={onCloseModal} />
+      {children}
     </Modal>
   )
 }

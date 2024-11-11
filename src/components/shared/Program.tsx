@@ -1,13 +1,17 @@
-import { useState } from "react"
-import ModalTopicsList from "./ModalTopicsList"
+import { useState, FC, Dispatch, SetStateAction } from "react"
+import ModalTopicsList from "../ui/ModalTopicsList"
 import { useTranslation } from "react-i18next"
 
 type ProgramProps = {
-  title: string
+  title?: string
   changeLesson: (lesson: number) => void
+  TopicList: FC<{
+    onClickModal: Dispatch<SetStateAction<boolean>>
+    changeLesson: (lesson: number) => void
+  }>
 }
 
-const Program = ({ title, changeLesson }: ProgramProps) => {
+const Program = ({ title, changeLesson, TopicList }: ProgramProps) => {
   const { t } = useTranslation("StudyingPage")
   const [showModal, setShowmodal] = useState(false)
   return (
@@ -21,10 +25,11 @@ const Program = ({ title, changeLesson }: ProgramProps) => {
       {showModal && (
         <ModalTopicsList
           title={title}
-          changeLesson={changeLesson}
           isOpen={showModal}
           onCloseModal={setShowmodal}
-        />
+        >
+          <TopicList onClickModal={setShowmodal} changeLesson={changeLesson} />
+        </ModalTopicsList>
       )}
     </div>
   )
