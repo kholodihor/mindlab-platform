@@ -31,7 +31,7 @@ const Progress = ({ progress, completed, course }: ProgressProps) => {
           </div>
         )}
 
-        <div className="px-[14px] md:w-[48.44%] md:px-[20px] 3md:w-[100%]">
+        <div className="px-[14px] sm:px-[20px] md:w-[48.44%] 3md:w-[100%]">
           <div className="relative mb-4 flex items-center justify-between  pb-4 ">
             <h2 className="text-violet sm:text-lg">{`${t("progress")} ${progress}%`}</h2>
             <button

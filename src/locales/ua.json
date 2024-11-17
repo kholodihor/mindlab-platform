@@ -64,7 +64,8 @@
     "materials": "Додаткові матеріали:",
     "test": "Тестове завдання:",
     "maximumScore": "Максимальний бал: 100",
-    "studying": "Навчання"
+    "studying": "Навчання",
+    "zoom": "Zoom"
   },
   "Progress": {
     "progress": "Мій прогрес:",
@@ -74,7 +75,12 @@
     "submitted": "Здано:",
     "homework": "домашок"
   },
+<<<<<<< HEAD
   "CertificatePage": {
     "pageTitle": "Сертифікати"
+=======
+  "Zoom": {
+    "zoom": "Посилання на заняття:"
+>>>>>>> c4731ccbb4de901f7a27ab9e21a45933f3865ff7
   }
 }

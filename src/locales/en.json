@@ -63,7 +63,8 @@
     "materials": "Additional materials:",
     "test": "Test task:",
     "maximumScore": "Maximum score: 100",
-    "studying": "Studying"
+    "studying": "Studying",
+    "zoom": "Zoom"
   },
   "Progress": {
     "progress": "My progress:",
@@ -73,7 +74,12 @@
     "submitted": "Submitted:",
     "homework": "homework"
   },
+<<<<<<< HEAD
   "CertificatePage": {
     "pageTitle": "Certificates"
+=======
+  "Zoom": {
+    "zoom": "Link to classes"
+>>>>>>> c4731ccbb4de901f7a27ab9e21a45933f3865ff7
   }
 }

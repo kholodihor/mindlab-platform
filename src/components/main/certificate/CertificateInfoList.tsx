@@ -4,7 +4,8 @@ import CertificateInfoItem from "./CertificateInfoItem"
 
 interface CertificateInfoListProps {
   certificate: {
-    tutor: string
+    tutorUa: string
+    tutorEn: string
     lectureDuration: number
     lecturesQuantity: number
     homeworkQuantity: number
@@ -17,7 +18,7 @@ const CertificateInfoList: React.FC<CertificateInfoListProps> = ({
 }) => {
   const certificateInfoList = [
     {
-      title: certificate.tutor,
+      title: certificate.tutorUa,
       subtitle: "Куратор",
       icon: <Smile size={14} color="#6d7078" strokeWidth={2} />
     },
@@ -36,7 +37,7 @@ const CertificateInfoList: React.FC<CertificateInfoListProps> = ({
   ]
 
   return (
-    <ul className="max-w-[439px] space-y-3 ">
+    <ul className="mb-20 max-w-[439px] space-y-3">
       {certificateInfoList.map((info, index) => (
         <CertificateInfoItem
           key={index}

@@ -1,38 +1,60 @@
-import React from "react"
+import React, { useRef, useState } from "react"
 import CertificateImg from "./CertificateImg"
 import CertificateInfoList from "./CertificateInfoList"
-import { Button } from "@/components/ui/button"
+import DownloadButton from "./DownloadButton"
+import ShareButton from "./ShareButton"
+import PrintButton from "./PrintButton"
+import { useReactToPrint } from "react-to-print"
+import { Certificate } from "@/pages/CertificatePage"
 
 interface CertificateInfoProps {
-  certificate: {
-    src: string
-    courseTitle: string
-    tutor: string
-    lecturesQuantity: number
-    lectureDuration: number
-    score: number
-    homeworkQuantity: number
-  }
+  certificateList: Certificate[]
 }
 
-const CertificateInfo: React.FC<CertificateInfoProps> = ({ certificate }) => {
+const CertificateInfo: React.FC<CertificateInfoProps> = ({
+  certificateList
+}) => {
+  const [activeImgIndex, setActiveImgIndex] = useState<number>(0)
+  const printRef = useRef<HTMLDivElement>(null)
+
+  const printHandler = useReactToPrint({
+    contentRef: printRef,
+    documentTitle: "Certificate"
+  })
+
   return (
-    <div className="ml-10 mt-14 flex justify-between">
-      <div className="mt-6">
-        <CertificateImg src={certificate.src} size="large" />
+    <>
+      <div className="ml-10 mt-14 flex justify-between">
+        <div className="mt-6" ref={printRef}>
+          <CertificateImg
+            src={certificateList[activeImgIndex].src}
+            size="large"
+          />
+        </div>
+        <div className="max-w-md bg-graphite p-10">
+          <h3 className="mb-2 mt-0 text-xl font-semibold">
+            {certificateList[activeImgIndex].courseTitle}
+          </h3>
+          <CertificateInfoList certificate={certificateList[activeImgIndex]} />
+          <div className="flex gap-5">
+            <DownloadButton src={certificateList[activeImgIndex].src} />
+            <ShareButton link={certificateList[activeImgIndex].link} />
+            <PrintButton printHandler={printHandler} />
+          </div>
+        </div>
       </div>
-      <div className="max-w-md bg-graphite p-10">
-        <h3 className="mb-2 mt-0 text-xl font-semibold">
-          {certificate.courseTitle}
-        </h3>
-        <CertificateInfoList certificate={certificate} />
-        <Button>
-          <a href="/images/certificates/certificate.jpg" download>
-            Завантажити
-          </a>
-        </Button>
+      <div className="ml-10 mt-4 flex gap-4">
+        {certificateList.map((certificate, index) => (
+          <div
+            key={certificate.id}
+            onClick={() => setActiveImgIndex(index)}
+            className="cursor-pointer"
+          >
+            <CertificateImg src={certificate.src} size="small" />
+          </div>
+        ))}
       </div>
-    </div>
+    </>
   )
 }
 

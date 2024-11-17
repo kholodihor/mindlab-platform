@@ -6,7 +6,7 @@ interface TopicsProps {
   lesson: number
 }
 
-const CurrentTopic = ({ handleNext, handlePrev, lesson }: TopicsProps) => {
+const NavigationBtn = ({ handleNext, handlePrev, lesson }: TopicsProps) => {
   const { t } = useTranslation("StudyingPage")
   return (
     <div className="mb-6 flex w-[100%] justify-between px-4 py-2">
@@ -33,4 +33,4 @@ const CurrentTopic = ({ handleNext, handlePrev, lesson }: TopicsProps) => {
   )
 }
 
-export default CurrentTopic
+export default NavigationBtn

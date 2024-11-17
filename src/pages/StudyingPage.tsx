@@ -1,36 +1,13 @@
-import Carousel from "@/components/shared/Carousel"
-import TabPanel from "@/components/shared/TabPanel"
-import { tabPanel } from "@/data/studying"
-import { useWidth } from "@/hooks/useWidth"
-import Progress from "@/components/main/studying/Progress"
-import { topicsList } from "@/data/studying"
+import PageHeader from "@/components/shared/PageHeader"
+import Studying from "../components/main/studying/Studying"
+import { useTranslation } from "react-i18next"
 
 const StudyingPage = () => {
-  const widthWiewport = useWidth()
-  const lecturesCompleted = topicsList.filter(
-    ({ completed }) => completed
-  ).length
-  const progress = Math.floor((lecturesCompleted / topicsList.length) * 100)
-  const courses = [
-    "Career guidance",
-    "Political science-sociology",
-    "Leadership",
-    "Business",
-    "Art",
-    "Innovative technologies"
-  ]
-
+  const { t } = useTranslation("StudyingPage")
   return (
-    <div className="pt-5 md:pt-10 3md:pt-0">
-      {widthWiewport >= 744 && widthWiewport < 1100 && (
-        <Progress
-          progress={progress}
-          completed={lecturesCompleted}
-          course="Career guidance"
-        />
-      )}
-      {widthWiewport < 744 && <Carousel data={courses} index={1} />}
-      <TabPanel tabList={tabPanel} />
+    <div>
+      <PageHeader title={t("studying")} />
+      <Studying />
     </div>
   )
 }
